@@ -1,0 +1,14 @@
+{
+  "name": "send-phone-message-hook",
+  "script": "./send-phone-message-hook.js",
+  "dependencies": {
+    "aws-sdk": "2.662.0"
+  },
+  "enabled": true,
+  "triggerId": "send-phone-message",
+  "secrets": {
+    "AWS_REGION": "_VALUE_NOT_SHOWN_",
+    "AWS_ACCESS_KEY_ID": "_VALUE_NOT_SHOWN_",
+    "AWS_SECRET_ACCESS_KEY": "_VALUE_NOT_SHOWN_"
+  }
+}

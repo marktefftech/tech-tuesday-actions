@@ -1,0 +1,11 @@
+{
+  "template": "verify_email",
+  "from": "{{ application.name }} <no-reply@letsdoauth.com>",
+  "subject": "Verification Email",
+  "resultUrl": "",
+  "syntax": "liquid",
+  "body": "./verify_email.html",
+  "urlLifetimeInSeconds": 432000,
+  "includeEmailInRedirect": false,
+  "enabled": false
+}

@@ -1,0 +1,29 @@
+{
+  "default_audience": "",
+  "default_directory": "",
+  "enabled_locales": ["en"],
+  "flags": {
+    "dashboard_security_center": true,
+    "dashboard_ui_next": true,
+    "disable_clickjack_protection_headers": false,
+    "enable_client_connections": false,
+    "enable_custom_domain_in_emails": true,
+    "enable_public_signup_user_exists_error": false,
+    "include_email_in_reset_pwd_redirect": false,
+    "include_email_in_verify_email_redirect": false,
+    "manage_new_roles": true,
+    "new_universal_login_experience_enabled": true,
+    "universal_login": true
+  },
+  "friendly_name": "Let's Do Auth",
+  "idle_session_lifetime": 72,
+  "session_lifetime": 168,
+  "support_email": "",
+  "support_url": "",
+  "universal_login": {
+    "colors": {
+      "page_background": "#141E30",
+      "primary": "#635DFF"
+    }
+  }
+}

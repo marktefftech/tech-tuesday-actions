@@ -1,0 +1,10 @@
+{
+  "template": "welcome_email",
+  "from": "{{ application.name }} <no-reply@letsdoauth.com>",
+  "subject": "Welcome Email",
+  "syntax": "liquid",
+  "body": "./welcome_email.html",
+  "resultUrl": "",
+  "urlLifetimeInSeconds": 432000,
+  "enabled": false
+}

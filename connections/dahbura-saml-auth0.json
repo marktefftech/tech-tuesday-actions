@@ -1,0 +1,34 @@
+{
+  "options": {
+    "cert": "-----BEGIN CERTIFICATE-----\r\nMIIDDTCCAfWgAwIBAgIJPmvE5SsjxI+aMA0GCSqGSIb3DQEBCwUAMCQxIjAgBgNV\r\nBAMTGXJ1ZHlkYWhidXJhLWlkcC5hdXRoMC5jb20wHhcNMTkwNjA0MTk1ODI4WhcN\r\nMzMwMjEwMTk1ODI4WjAkMSIwIAYDVQQDExlydWR5ZGFoYnVyYS1pZHAuYXV0aDAu\r\nY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0FFKvQCD+k9KIRCf\r\nAquxR2kS/+1dWLY8cPXlqrslvxjPZPi5yhhTQNTu07XOMk0YPnMWiX3DH2FEPq/P\r\n6mAHajEVGlDU8Ho1c2GrffcGFr0Whk1VTNnkOAWH4/NQjb+cqj6IuHFfCGFTV6AL\r\n2RKMbKQy3gCNT7XHTo3iFWkaOnkcmc9cdVRi2+o5ZpBs5z06jVzAZLoCIFA5wEP2\r\n+hQGOfzhXlM9FXGuN/v3ikvqU+VdbKTwO7LWwZKBGpMVZ36oRgP9bWxcxr8NsE3g\r\nvd/QE3gIcCbC2Oxrxex5PV5cyvH9StVaFNWt+HiJZoOBkQ3nfYVmvzHYrdsGR36v\r\nmQFbgQIDAQABo0IwQDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBTr7Usg+ZXi\r\nORTleR/cwKolzjffqzAOBgNVHQ8BAf8EBAMCAoQwDQYJKoZIhvcNAQELBQADggEB\r\nACXf0kSXWnGf5BA8JTw0rUblOdUL9bjigHBypxRU1XWjsKYTxi3jXilC6nabNUuE\r\nAO1UspP/Rd/QmNwSt0v8j0Y3Fj+q5oj9O8h1WfoWwn22Gdf4DeCcqsCquPzN4Qjd\r\ndiiXMY/VBK20Iwqp4rvTlTnigfZMrMQdDGn4GS+n46qr6WBB+tgb3hdLYIhJXK8h\r\nYYWsJoBfX9dvW2fiHPPG0wLuSM4QcJzqR9i40WV2woX1cP/x8W6kxsjG2M8tOGVw\r\n4OpdYyI8kykB7F9L9WNZTnJeeMsOVbD5qwOlce6DTs1YqVNc/A8rLClw9E3eIFwf\r\nhn8SNoc6kxkEkrZcT2hX6lk=\r\n-----END CERTIFICATE-----\r\n",
+    "debug": false,
+    "expires": "2033-02-10T19:58:28.000Z",
+    "subject": {
+      "commonName": "rudydahbura-idp.auth0.com"
+    },
+    "fieldsMap": {
+      "favorite_color_saml": "http://schemas.auth0.com/https://letsdoauth;com/favorite_color"
+    },
+    "signingCert": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tDQpNSUlERFRDQ0FmV2dBd0lCQWdJSlBtdkU1U3NqeEkrYU1BMEdDU3FHU0liM0RRRUJDd1VBTUNReElqQWdCZ05WDQpCQU1UR1hKMVpIbGtZV2hpZFhKaExXbGtjQzVoZFhSb01DNWpiMjB3SGhjTk1Ua3dOakEwTVRrMU9ESTRXaGNODQpNek13TWpFd01UazFPREk0V2pBa01TSXdJQVlEVlFRREV4bHlkV1I1WkdGb1luVnlZUzFwWkhBdVlYVjBhREF1DQpZMjl0TUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUEwRkZLdlFDRCtrOUtJUkNmDQpBcXV4UjJrUy8rMWRXTFk4Y1BYbHFyc2x2eGpQWlBpNXloaFRRTlR1MDdYT01rMFlQbk1XaVgzREgyRkVQcS9QDQo2bUFIYWpFVkdsRFU4SG8xYzJHcmZmY0dGcjBXaGsxVlRObmtPQVdINC9OUWpiK2NxajZJdUhGZkNHRlRWNkFMDQoyUktNYktReTNnQ05UN1hIVG8zaUZXa2FPbmtjbWM5Y2RWUmkyK281WnBCczV6MDZqVnpBWkxvQ0lGQTV3RVAyDQoraFFHT2Z6aFhsTTlGWEd1Ti92M2lrdnFVK1ZkYktUd083TFd3WktCR3BNVlozNm9SZ1A5Yld4Y3hyOE5zRTNnDQp2ZC9RRTNnSWNDYkMyT3hyeGV4NVBWNWN5dkg5U3RWYUZOV3QrSGlKWm9PQmtRM25mWVZtdnpIWXJkc0dSMzZ2DQptUUZiZ1FJREFRQUJvMEl3UURBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJUcjdVc2crWlhpDQpPUlRsZVIvY3dLb2x6amZmcXpBT0JnTlZIUThCQWY4RUJBTUNBb1F3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCDQpBQ1hmMGtTWFduR2Y1QkE4SlR3MHJVYmxPZFVMOWJqaWdIQnlweFJVMVhXanNLWVR4aTNqWGlsQzZuYWJOVXVFDQpBTzFVc3BQL1JkL1FtTndTdDB2OGowWTNGaitxNW9qOU84aDFXZm9Xd24yMkdkZjREZUNjcXNDcXVQek40UWpkDQpkaWlYTVkvVkJLMjBJd3FwNHJ2VGxUbmlnZlpNck1RZERHbjRHUytuNDZxcjZXQkIrdGdiM2hkTFlJaEpYSzhoDQpZWVdzSm9CZlg5ZHZXMmZpSFBQRzB3THVTTTRRY0p6cVI5aTQwV1Yyd29YMWNQL3g4VzZreHNqRzJNOHRPR1Z3DQo0T3BkWXlJOGt5a0I3RjlMOVdOWlRuSmVlTXNPVmJENXF3T2xjZTZEVHMxWXFWTmMvQThyTENsdzlFM2VJRndmDQpobjhTTm9jNmt4a0VrclpjVDJoWDZsaz0NCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0NCg==",
+    "thumbprints": ["1264aebe97f0f71f8b7c03172c466a5227dd6845"],
+    "idpinitiated": {
+      "enabled": true,
+      "client_id": "lsHbUXlIE1d8SLWgOZBCfBL8SbmRCRc-",
+      "client_protocol": "oauth2",
+      "client_authorizequery": "redirect_uri=http://localhost:3000/callback-idp&response_type=code"
+    },
+    "tenant_domain": "letsdoauth.com",
+    "domain_aliases": ["letsdoauth.com"],
+    "signInEndpoint": "https://rudydahbura-idp.auth0.com/samlp/snv8seeCplkSMF0GPbXHrQdSA8RcOquz",
+    "digestAlgorithm": "sha256",
+    "signOutEndpoint": "https://rudydahbura-idp.auth0.com/samlp/snv8seeCplkSMF0GPbXHrQdSA8RcOquz/logout",
+    "signSAMLRequest": true,
+    "signatureAlgorithm": "rsa-sha256"
+  },
+  "strategy": "samlp",
+  "name": "dahbura-saml-auth0",
+  "is_domain_connection": false,
+  "display_name": "Auth0 SAML",
+  "show_as_button": false,
+  "enabled_clients": ["Auth0 Demo SPA", "Auth0 Demo Web App"]
+}

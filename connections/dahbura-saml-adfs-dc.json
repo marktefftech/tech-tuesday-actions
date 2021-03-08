@@ -1,0 +1,32 @@
+{
+  "options": {
+    "cert": "-----BEGIN CERTIFICATE-----\nMIIC6DCCAdCgAwIBAgIQHGUj/VVpIaBFnxZPyIsfIDANBgkqhkiG9w0BAQsFADAw\nMS4wLAYDVQQDEyVBREZTIFNpZ25pbmcgLSBhZGZzLWRjLmxldHNkb2F1dGguY29t\nMB4XDTE5MDUzMTE3NTA0NFoXDTIwMDUzMDE3NTA0NFowMDEuMCwGA1UEAxMlQURG\nUyBTaWduaW5nIC0gYWRmcy1kYy5sZXRzZG9hdXRoLmNvbTCCASIwDQYJKoZIhvcN\nAQEBBQADggEPADCCAQoCggEBANi1BYXQsZQo18WLC/dIDJEC04jYCwLPtYULLeTw\nq2R7WT4WRG4ObUVXYXdtKwxqmZnoX1sD2+iqdQhYzAhce7zZzH6LUzCyHZnSc/Rh\nGOZNKT+YT+sNKPJN4DWNi3bsf5qa0Yu4b3LgnsGspiWv7MnslWwCBYvQYqzlfKji\n78J5iHG6I57F0WeGa4ViO2qySCuQXIkuIUAp7OISIY3wk4c8ZLgd2rS8AXuit9g7\nFKfZzopWuovhhqlMJQZ/Ap9fRoKvzbcEcXW17Cym7cVcKer4CFUSVOX9dSYfKyvA\np2bnWHYHq1w+Q8lBg9FyO5QKLVgewNPm2f3Op50dHrVFfxsCAwEAATANBgkqhkiG\n9w0BAQsFAAOCAQEAENiBQkXEzsEfIlAZ4U77lUppXSEeujLM8Z5NG9nPI6f1ppE4\nXXIJAh3yZlSUxXqPr1VJbkMBP4xIiFtSGmBzjL91IEUqwaoTfOtkP86dskwgVJZw\nunvR3NSyXzB7IMM5CddSdeLpdwTLTSU+rl1KGJlMaRFQdXAO3G+YcY0dkit3h/tQ\n5YJz5NNcJx0XAP2QUqujBYYNBpP8btzd/pxNSveDGaEyG+tgwYw3mHWwYE0Rs+sK\nogXBuQ/p/dbEwVBYi6GhyLLoqrm30w14cZVK63K/j63aAOB+fcST4yksvL2yDI27\nPqBWSTz4I+byn+vjB8rHo0++R8tEpxGvKl6hbQ==\n-----END CERTIFICATE-----\n",
+    "debug": false,
+    "expires": "2020-05-30T17:50:44.000Z",
+    "subject": {
+      "commonName": "ADFS Signing - adfs-dc.letsdoauth.com"
+    },
+    "entityId": "urn:idp.letsdoauth.com:dahbura-adfs-dc-saml",
+    "signingCert": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM2RENDQWRDZ0F3SUJBZ0lRSEdVai9WVnBJYUJGbnhaUHlJc2ZJREFOQmdrcWhraUc5dzBCQVFzRkFEQXcKTVM0d0xBWURWUVFERXlWQlJFWlRJRk5wWjI1cGJtY2dMU0JoWkdaekxXUmpMbXhsZEhOa2IyRjFkR2d1WTI5dApNQjRYRFRFNU1EVXpNVEUzTlRBME5Gb1hEVEl3TURVek1ERTNOVEEwTkZvd01ERXVNQ3dHQTFVRUF4TWxRVVJHClV5QlRhV2R1YVc1bklDMGdZV1JtY3kxa1l5NXNaWFJ6Wkc5aGRYUm9MbU52YlRDQ0FTSXdEUVlKS29aSWh2Y04KQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQU5pMUJZWFFzWlFvMThXTEMvZElESkVDMDRqWUN3TFB0WVVMTGVUdwpxMlI3V1Q0V1JHNE9iVVZYWVhkdEt3eHFtWm5vWDFzRDIraXFkUWhZekFoY2U3elp6SDZMVXpDeUhablNjL1JoCkdPWk5LVCtZVCtzTktQSk40RFdOaTNic2Y1cWEwWXU0YjNMZ25zR3NwaVd2N01uc2xXd0NCWXZRWXF6bGZLamkKNzhKNWlIRzZJNTdGMFdlR2E0VmlPMnF5U0N1UVhJa3VJVUFwN09JU0lZM3drNGM4WkxnZDJyUzhBWHVpdDlnNwpGS2Zaem9wV3VvdmhocWxNSlFaL0FwOWZSb0t2emJjRWNYVzE3Q3ltN2NWY0tlcjRDRlVTVk9YOWRTWWZLeXZBCnAyYm5XSFlIcTF3K1E4bEJnOUZ5TzVRS0xWZ2V3TlBtMmYzT3A1MGRIclZGZnhzQ0F3RUFBVEFOQmdrcWhraUcKOXcwQkFRc0ZBQU9DQVFFQUVOaUJRa1hFenNFZklsQVo0VTc3bFVwcFhTRWV1akxNOFo1Tkc5blBJNmYxcHBFNApYWElKQWgzeVpsU1V4WHFQcjFWSmJrTUJQNHhJaUZ0U0dtQnpqTDkxSUVVcXdhb1RmT3RrUDg2ZHNrd2dWSlp3CnVudlIzTlN5WHpCN0lNTTVDZGRTZGVMcGR3VExUU1UrcmwxS0dKbE1hUkZRZFhBTzNHK1ljWTBka2l0M2gvdFEKNVlKejVOTmNKeDBYQVAyUVVxdWpCWVlOQnBQOGJ0emQvcHhOU3ZlREdhRXlHK3Rnd1l3M21IV3dZRTBScytzSwpvZ1hCdVEvcC9kYkV3VkJZaTZHaHlMTG9xcm0zMHcxNGNaVks2M0svajYzYUFPQitmY1NUNHlrc3ZMMnlESTI3ClBxQldTVHo0SStieW4rdmpCOHJIbzArK1I4dEVweEd2S2w2aGJRPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+    "thumbprints": ["dadada0b340b172bba3232683a906393fe9845ee"],
+    "idpinitiated": {
+      "enabled": true,
+      "client_id": "lsHbUXlIE1d8SLWgOZBCfBL8SbmRCRc-",
+      "client_protocol": "oauth2",
+      "client_authorizequery": "redirect_uri=http://localhost:3000/callback-idp"
+    },
+    "tenant_domain": "letsdoauth.com",
+    "domain_aliases": ["letsdoauth.com"],
+    "signInEndpoint": "https://adfs-dc.letsdoauth.com/adfs/ls",
+    "digestAlgorithm": "sha256",
+    "signOutEndpoint": "https://adfs-dc.letsdoauth.com/adfs/ls/",
+    "signSAMLRequest": true,
+    "signatureAlgorithm": "rsa-sha256",
+    "non_persistent_attrs": ["company", "department", "title"]
+  },
+  "strategy": "samlp",
+  "name": "dahbura-saml-adfs-dc",
+  "is_domain_connection": false,
+  "display_name": "ADFS SAML",
+  "enabled_clients": []
+}

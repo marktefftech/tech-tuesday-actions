@@ -1,0 +1,34 @@
+{
+  "options": {
+    "app_id": "",
+    "domain": "rdahburagmail.onmicrosoft.com",
+    "granted": true,
+    "tenantId": "9841cf08-daaa-4862-b80d-6b049f863314",
+    "client_id": "df83dfc0-b88b-4710-9bc3-4cd7b40f65fb",
+    "client_secret": "##CONN_SECRET_DAHBURA_AAD##",
+    "use_wsfed": false,
+    "app_domain": "rudydahbura.auth0.com",
+    "ext_groups": true,
+    "ext_profile": true,
+    "thumbprints": [
+      "8e26cd6e415249b9b13d8acdf4216a464e0ae20c",
+      "920d8b62cd93d024e321f8f8aede892329de9f7f",
+      "33aa57ed11e8ada2eca6b7c97910a34b1b944617",
+      "d7ca67320dd49ab5af04afed90301b8e03390a60"
+    ],
+    "basic_profile": true,
+    "tenant_domain": "rdahburagmail.onmicrosoft.com",
+    "waad_protocol": "openid-connect",
+    "domain_aliases": ["rdahburagmail.onmicrosoft.com", "gmail.com"],
+    "api_enable_users": true,
+    "ext_nested_groups": false,
+    "useCommonEndpoint": false,
+    "waad_common_endpoint": false,
+    "max_groups_to_retrieve": "",
+    "should_trust_email_verified_connection": "never_set_emails_as_verified"
+  },
+  "strategy": "waad",
+  "name": "dahbura-aad-rdahbura",
+  "is_domain_connection": false,
+  "enabled_clients": []
+}

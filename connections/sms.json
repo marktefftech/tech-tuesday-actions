@@ -1,0 +1,18 @@
+{
+  "options": {
+    "from": "+13106834603",
+    "name": "sms",
+    "totp": {
+      "length": 6,
+      "time_step": 300
+    },
+    "syntax": "md_with_macros",
+    "template": "@@password@@ is your verification code.",
+    "disable_signup": false,
+    "brute_force_protection": true
+  },
+  "strategy": "sms",
+  "name": "sms",
+  "is_domain_connection": false,
+  "enabled_clients": ["Auth0 Demo SPA", "Auth0 Demo Web App"]
+}

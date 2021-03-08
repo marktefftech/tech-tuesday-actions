@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "script": "./rd-role-assignment.js",
+  "name": "rd-role-assignment",
+  "order": 5,
+  "stage": "login_success"
+}

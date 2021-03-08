@@ -1,0 +1,11 @@
+{
+  "template": "reset_email",
+  "from": "{{ application.name }} <no-reply@letsdoauth.com>",
+  "subject": "Change Password",
+  "resultUrl": "",
+  "syntax": "liquid",
+  "body": "./reset_email.html",
+  "urlLifetimeInSeconds": 432000,
+  "includeEmailInRedirect": false,
+  "enabled": true
+}

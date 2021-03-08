@@ -1,0 +1,21 @@
+{
+  "options": {
+    "name": "email",
+    "totp": {
+      "length": 6,
+      "time_step": 300
+    },
+    "email": {
+      "body": "./email.html",
+      "from": "{{ application.name }} <rdahbura@gmail.com>",
+      "syntax": "liquid",
+      "subject": "Welcome to {{ application.name }}"
+    },
+    "disable_signup": false,
+    "brute_force_protection": true
+  },
+  "strategy": "email",
+  "name": "email",
+  "is_domain_connection": false,
+  "enabled_clients": ["Auth0 Demo SPA", "Auth0 Demo Web App"]
+}

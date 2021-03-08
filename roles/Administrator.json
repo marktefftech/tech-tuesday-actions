@@ -1,0 +1,42 @@
+{
+  "name": "Administrator",
+  "description": "Role for administrators.",
+  "permissions": [
+    {
+      "permission_name": "create:clients",
+      "resource_server_identifier": "https://api.letsdoauth.com"
+    },
+    {
+      "permission_name": "create:users",
+      "resource_server_identifier": "https://api.letsdoauth.com"
+    },
+    {
+      "permission_name": "delete:clients",
+      "resource_server_identifier": "https://api.letsdoauth.com"
+    },
+    {
+      "permission_name": "delete:users",
+      "resource_server_identifier": "https://api.letsdoauth.com"
+    },
+    {
+      "permission_name": "read:clients",
+      "resource_server_identifier": "https://api.letsdoauth.com"
+    },
+    {
+      "permission_name": "read:connections",
+      "resource_server_identifier": "https://api.letsdoauth.com"
+    },
+    {
+      "permission_name": "read:users",
+      "resource_server_identifier": "https://api.letsdoauth.com"
+    },
+    {
+      "permission_name": "update:clients",
+      "resource_server_identifier": "https://api.letsdoauth.com"
+    },
+    {
+      "permission_name": "update:users",
+      "resource_server_identifier": "https://api.letsdoauth.com"
+    }
+  ]
+}

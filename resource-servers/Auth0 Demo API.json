@@ -1,0 +1,22 @@
+{
+  "name": "Auth0 Demo API",
+  "identifier": "https://api.letsdoauth.com",
+  "allow_offline_access": true,
+  "skip_consent_for_verifiable_first_party_clients": true,
+  "token_lifetime": 7200,
+  "token_lifetime_for_web": 7200,
+  "signing_alg": "RS256",
+  "scopes": [
+    { "value": "create:clients", "description": "Create clients." },
+    { "value": "create:users", "description": "Create users." },
+    { "value": "delete:clients", "description": "Delete clients." },
+    { "value": "delete:users", "description": "Delete users." },
+    { "value": "read:clients", "description": "Read clients." },
+    { "value": "read:connections", "description": "Read connections." },
+    { "value": "read:users", "description": "Read users." },
+    { "value": "update:clients", "description": "Update clients." },
+    { "value": "update:users", "description": "Update users." }
+  ],
+  "enforce_policies": true,
+  "token_dialect": "access_token_authz"
+}

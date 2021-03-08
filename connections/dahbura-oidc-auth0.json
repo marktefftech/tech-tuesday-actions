@@ -1,0 +1,22 @@
+{
+  "options": {
+    "type": "back_channel",
+    "scope": "openid profile email",
+    "issuer": "https://rudydahbura-idp.auth0.com/",
+    "icon_url": "",
+    "jwks_uri": "https://rudydahbura-idp.auth0.com/.well-known/jwks.json",
+    "client_id": "MmutD1Z7hThJ25k0Kx04frHkgRsGVzUT",
+    "client_secret": "##CONN_SECRET_DAHBURA_OIDC##",
+    "discovery_url": "https://rudydahbura-idp.auth0.com/.well-known/openid-configuration",
+    "domain_aliases": ["letsdoauth.com"],
+    "token_endpoint": "https://rudydahbura-idp.auth0.com/oauth/token",
+    "userinfo_endpoint": "https://rudydahbura-idp.auth0.com/userinfo",
+    "authorization_endpoint": "https://rudydahbura-idp.auth0.com/authorize"
+  },
+  "strategy": "oidc",
+  "name": "dahbura-oidc-auth0",
+  "is_domain_connection": false,
+  "display_name": "Auth0 OIDC",
+  "show_as_button": false,
+  "enabled_clients": []
+}

@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "script": "./rd-add-lead-salesforce.js",
+  "name": "rd-add-lead-salesforce",
+  "order": 60,
+  "stage": "login_success"
+}

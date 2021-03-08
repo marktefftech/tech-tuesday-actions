@@ -1,0 +1,15 @@
+{
+  "client_id": "Auth0 Demo API Client",
+  "audience": "https://api.letsdoauth.com",
+  "scope": [
+    "create:clients",
+    "create:users",
+    "delete:clients",
+    "delete:users",
+    "read:clients",
+    "read:connections",
+    "read:users",
+    "update:clients",
+    "update:users"
+  ]
+}

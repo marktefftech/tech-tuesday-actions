@@ -1,0 +1,11 @@
+{
+  "name": "smtp",
+  "credentials": {
+    "smtp_host": "smtp.mailtrap.io",
+    "smtp_port": 2525,
+    "smtp_user": "23b158ac69b5f7",
+    "smtp_pass": "##SMTP_PASSWORD##"
+  },
+  "enabled": true,
+  "default_from_address": "Rudy Dahbura <rdahbura@gmail.com>"
+}

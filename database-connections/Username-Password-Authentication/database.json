@@ -1,0 +1,40 @@
+{
+  "options": {
+    "mfa": {
+      "active": true,
+      "return_enroll_settings": true
+    },
+    "import_mode": false,
+    "disable_signup": false,
+    "passwordPolicy": "good",
+    "password_history": {
+      "size": 5,
+      "enable": false
+    },
+    "strategy_version": 2,
+    "requires_username": false,
+    "password_dictionary": {
+      "enable": false,
+      "dictionary": []
+    },
+    "brute_force_protection": true,
+    "password_no_personal_info": {
+      "enable": false
+    },
+    "password_complexity_options": {
+      "min_length": 8
+    },
+    "enabledDatabaseCustomization": false
+  },
+  "strategy": "auth0",
+  "name": "Username-Password-Authentication",
+  "is_domain_connection": false,
+  "realms": ["Username-Password-Authentication"],
+  "enabled_clients": [
+    "Auth0 Delegated Admin",
+    "Auth0 Demo Device Flow",
+    "Auth0 Demo SPA",
+    "Auth0 Demo Salesforce",
+    "Auth0 Demo Web App"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "options": {
+    "cert": "-----BEGIN CERTIFICATE-----\nMIIDpDCCAoygAwIBAgIGAWSQw5A1MA0GCSqGSIb3DQEBCwUAMIGSMQswCQYDVQQGEwJVUzETMBEG\r\nA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwET2t0YTEU\r\nMBIGA1UECwwLU1NPUHJvdmlkZXIxEzARBgNVBAMMCmRldi00ODYyOTYxHDAaBgkqhkiG9w0BCQEW\r\nDWluZm9Ab2t0YS5jb20wHhcNMTgwNzEyMjMxMDMyWhcNMjgwNzEyMjMxMTMyWjCBkjELMAkGA1UE\r\nBhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDTALBgNV\r\nBAoMBE9rdGExFDASBgNVBAsMC1NTT1Byb3ZpZGVyMRMwEQYDVQQDDApkZXYtNDg2Mjk2MRwwGgYJ\r\nKoZIhvcNAQkBFg1pbmZvQG9rdGEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA\r\nkEqvMjxSY9ElzEvN8LfDPn/2D7Bbx+kZETNnsmNLXTzT0KN0Su6FssQ58f2hha3ceRQL804/beRE\r\ntnv/0XKmscrv4bx2E9WSErOZW9zu4HuqBzeojfCXlexZOZBa0vKbnLy6n2rEsQhLaKSG1n4+PVTT\r\nMLdaF3F7Fkwekiz5BmqZlJUGw/je3JZwf+w1FUQXMiEI/tkovabZe6DGZ4jGb2Juo3eJeKcImIpB\r\naFQ0xwAD2XdL/3WpQfZyyCaprySnZIaR6lep9KSLMlezaA6QT8OAJaGXWJCznjx37IGZfFlO15Vd\r\nrW/xgfZQHYKGmgbkVt8BYzUa7QR3VkfxVkbuSQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBkHqu2\r\nRKmU0yYyYuC6m2wT9WbYZzfsYXV5gCch+nLeSamGloOcE1s8LTs2wQkIIPB4VFHC0HCbqnBIFv8K\r\nXSXCFOjsLeOqitdALeHmfGf6qqgio6J8n3ArLs/sLXadS5jEy9Oi39yndaf+UY/bTC8UzPW1TRSO\r\nUgbj1x2TyOoRrYlUvxWet95kjEIOgjFZ+UyzVr+/zoUbVlQgfTghcdBMMutQfQDeXw/M2fBEAHhz\r\nsPCQpurbEoDLJnuxmcD4IKk7SGHUrEuqUE+dR5BOrwUlfVwCratHnYlghMtvWRT42HHQ30vq85zR\r\nSZ2BPG7JJ1dh7EXlAp7aNDiBZpS8KGZs\r\n-----END CERTIFICATE-----\n",
+    "debug": false,
+    "expires": "2028-07-12T23:11:32.000Z",
+    "subject": {
+      "commonName": "dev-486296",
+      "countryName": "US",
+      "emailAddress": "info@okta.com",
+      "localityName": "San Francisco",
+      "organizationName": "Okta",
+      "stateOrProvinceName": "California",
+      "organizationalUnitName": "SSOProvider"
+    },
+    "entityId": "urn:idp.letsdoauth.com:dahbura-okta-saml",
+    "signingCert": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURwRENDQW95Z0F3SUJBZ0lHQVdTUXc1QTFNQTBHQ1NxR1NJYjNEUUVCQ3dVQU1JR1NNUXN3Q1FZRFZRUUdFd0pWVXpFVE1CRUcNCkExVUVDQXdLUTJGc2FXWnZjbTVwWVRFV01CUUdBMVVFQnd3TlUyRnVJRVp5WVc1amFYTmpiekVOTUFzR0ExVUVDZ3dFVDJ0MFlURVUNCk1CSUdBMVVFQ3d3TFUxTlBVSEp2ZG1sa1pYSXhFekFSQmdOVkJBTU1DbVJsZGkwME9EWXlPVFl4SERBYUJna3Foa2lHOXcwQkNRRVcNCkRXbHVabTlBYjJ0MFlTNWpiMjB3SGhjTk1UZ3dOekV5TWpNeE1ETXlXaGNOTWpnd056RXlNak14TVRNeVdqQ0JrakVMTUFrR0ExVUUNCkJoTUNWVk14RXpBUkJnTlZCQWdNQ2tOaGJHbG1iM0p1YVdFeEZqQVVCZ05WQkFjTURWTmhiaUJHY21GdVkybHpZMjh4RFRBTEJnTlYNCkJBb01CRTlyZEdFeEZEQVNCZ05WQkFzTUMxTlRUMUJ5YjNacFpHVnlNUk13RVFZRFZRUUREQXBrWlhZdE5EZzJNamsyTVJ3d0dnWUoNCktvWklodmNOQVFrQkZnMXBibVp2UUc5cmRHRXVZMjl0TUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUENCmtFcXZNanhTWTlFbHpFdk44TGZEUG4vMkQ3QmJ4K2taRVRObnNtTkxYVHpUMEtOMFN1NkZzc1E1OGYyaGhhM2NlUlFMODA0L2JlUkUNCnRudi8wWEttc2NydjRieDJFOVdTRXJPWlc5enU0SHVxQnplb2pmQ1hsZXhaT1pCYTB2S2JuTHk2bjJyRXNRaExhS1NHMW40K1BWVFQNCk1MZGFGM0Y3Rmt3ZWtpejVCbXFabEpVR3cvamUzSlp3Zit3MUZVUVhNaUVJL3Rrb3ZhYlplNkRHWjRqR2IySnVvM2VKZUtjSW1JcEINCmFGUTB4d0FEMlhkTC8zV3BRZlp5eUNhcHJ5U25aSWFSNmxlcDlLU0xNbGV6YUE2UVQ4T0FKYUdYV0pDem5qeDM3SUdaZkZsTzE1VmQNCnJXL3hnZlpRSFlLR21nYmtWdDhCWXpVYTdRUjNWa2Z4VmtidVNRSURBUUFCTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFCa0hxdTINClJLbVUweVl5WXVDNm0yd1Q5V2JZWnpmc1lYVjVnQ2NoK25MZVNhbUdsb09jRTFzOExUczJ3UWtJSVBCNFZGSEMwSENicW5CSUZ2OEsNClhTWENGT2pzTGVPcWl0ZEFMZUhtZkdmNnFxZ2lvNko4bjNBckxzL3NMWGFkUzVqRXk5T2kzOXluZGFmK1VZL2JUQzhVelBXMVRSU08NClVnYmoxeDJUeU9vUnJZbFV2eFdldDk1a2pFSU9nakZaK1V5elZyKy96b1ViVmxRZ2ZUZ2hjZEJNTXV0UWZRRGVYdy9NMmZCRUFIaHoNCnNQQ1FwdXJiRW9ETEpudXhtY0Q0SUtrN1NHSFVyRXVxVUUrZFI1Qk9yd1VsZlZ3Q3JhdEhuWWxnaE10dldSVDQySEhRMzB2cTg1elINClNaMkJQRzdKSjFkaDdFWGxBcDdhTkRpQlpwUzhLR1pzDQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
+    "thumbprints": ["e0e999735d3c389f363683e9aa2573e46854dca6"],
+    "idpinitiated": {
+      "enabled": true,
+      "client_id": "lsHbUXlIE1d8SLWgOZBCfBL8SbmRCRc-",
+      "client_protocol": "oauth2",
+      "client_authorizequery": "redirect_uri=http://localhost:3000/callback-idp"
+    },
+    "tenant_domain": "letsdoauth.com",
+    "domain_aliases": ["letsdoauth.com"],
+    "signInEndpoint": "https://dev-486296.oktapreview.com/app/letsdoauth_oktasaml_1/exkfsfoicwrDihfBy0h7/sso/saml",
+    "digestAlgorithm": "sha256",
+    "signOutEndpoint": "https://dev-486296.oktapreview.com/app/letsdoauth_oktasaml_1/exkfsfoicwrDihfBy0h7/slo/saml",
+    "signSAMLRequest": true,
+    "signatureAlgorithm": "rsa-sha256"
+  },
+  "strategy": "samlp",
+  "name": "dahbura-saml-okta",
+  "is_domain_connection": false,
+  "display_name": "Okta SAML",
+  "enabled_clients": []
+}

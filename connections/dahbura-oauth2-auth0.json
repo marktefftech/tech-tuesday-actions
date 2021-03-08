@@ -1,0 +1,21 @@
+{
+  "options": {
+    "scope": "openid profile email offline_access",
+    "scripts": {
+      "fetchUserProfile": "function fetchProfile(accessToken, ctx, cb) {\n  const jsonwebtoken = require('jsonwebtoken');\n\n  console.log('ACCESS TOKEN');\n  console.log(accessToken);\n  console.log('CONTEXT');\n  console.log(JSON.stringify(ctx, null, 2));\n\n  if (!ctx.id_token) return cb('missing-id_token');\n\n  const jwt = jsonwebtoken.decode(ctx.id_token);\n\n  console.log('JWT');\n  console.log(jwt);\n\n  if (!jwt) return callback('malformed-id_token');\n  if (!jwt.sub) return callback('missing-sub');\n\n  ctx.access_token = accessToken;\n\n  const profile = {\n    user_id: jwt.sub,\n    email: jwt.email,\n    app_metadata: {\n      ext_identity: [ctx],\n    },\n  };\n\n  if (jwt.picture) profile.picture = jwt.picture;\n  if (jwt.given_name) profile.given_name = jwt.given_name;\n  if (jwt.family_name) profile.family_name = jwt.family_name;\n  if (jwt.name) profile.name = jwt.name;\n\n  console.log('PROFILE');\n  console.log(JSON.stringify(profile, null, 2));\n\n  cb(null, profile);\n}\n"
+    },
+    "tokenURL": "https://rudydahbura-idp.auth0.com/oauth/token",
+    "client_id": "S9HUfdObwWadKDnYy4olafMldG7vs1rR",
+    "client_secret": "##CONN_SECRET_DAHBURA_OAUTH2##",
+    "upstream_params": {
+      "audience": {
+        "value": "https://api.rudydahbura-idp.com"
+      }
+    },
+    "authorizationURL": "https://rudydahbura-idp.auth0.com/authorize"
+  },
+  "strategy": "oauth2",
+  "name": "dahbura-oauth2-auth0",
+  "is_domain_connection": false,
+  "enabled_clients": []
+}

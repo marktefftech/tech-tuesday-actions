@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Auth0 - Sign In</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.auth0.com/styleguide/2.0.1/lib/logos/img/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="https://cdn.auth0.com/manage/v1.3239.0/img/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="https://cdn.auth0.com/manage/v1.3239.0/img/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="https://cdn.auth0.com/manage/v1.3239.0/img/apple-touch-icon-167x167.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://cdn.auth0.com/manage/v1.3239.0/img/apple-touch-icon-180x180.png"
+    />
+  </head>
+  <body>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        animation: gradient 15s ease infinite;
+        background: linear-gradient(-45deg, #ff44dd, #3885ff, #3ec6eb, #1bc99f);
+        background-size: 400% 400%;
+      }
+
+      #root {
+        padding-top: 200px;
+      }
+
+      .auth0-lock.auth0-lock .auth0-lock-header-bg {
+        display: none;
+      }
+
+      .auth0-lock.auth0-lock.auth0-lock-opened .auth0-lock-widget {
+        box-shadow: none;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        #root {
+          padding-top: 200px;
+        }
+      }
+    </style>
+
+    <div id="root"></div>
+    <script src="https://cdn.auth0.com/js/lock/11.28.0/lock.min.js"></script>
+    <script>
+      // Decode utf8 characters properly
+      var config = JSON.parse(
+        decodeURIComponent(escape(window.atob('@@config@@')))
+      );
+      config.extraParams = config.extraParams || {};
+      var connection = config.connection;
+      var prompt = config.prompt;
+      var languageDictionary;
+      var language;
+
+      if (config.dict && config.dict.signin && config.dict.signin.title) {
+        languageDictionary = { title: config.dict.signin.title };
+      } else if (typeof config.dict === 'string') {
+        language = config.dict;
+      }
+      var loginHint = config.extraParams.login_hint;
+      var colors = config.colors || {};
+
+      var commonConfig = {
+        auth: {
+          redirectUrl: config.callbackURL,
+          responseType:
+            (config.internalOptions || {}).response_type ||
+            (config.callbackOnLocationHash ? 'token' : 'code'),
+          params: config.internalOptions
+        },
+        /* additional configuration needed for custom domains */
+        configurationBaseUrl: config.clientConfigurationBaseUrl,
+        overrides: {
+          __tenant: config.auth0Tenant,
+          __token_issuer: config.authorizationServer.issuer
+        },
+        assetsUrl: config.assetsUrl,
+        allowedConnections: connection ? [connection] : null,
+        rememberLastLogin: !prompt,
+        language: language,
+        languageDictionary: languageDictionary,
+        theme: {
+          logo: config.icon ? config.icon : null,
+          primaryColor: colors.primary ? colors.primary : 'green'
+        },
+        prefill: loginHint ? { email: loginHint, username: loginHint } : null,
+        closable: false,
+        defaultADUsernameFromEmailPrefix: true
+      };
+
+      var lock = !!config.extraParams.passwordless
+        ? initLockPwdless(commonConfig)
+        : initLock(commonConfig);
+
+      if (colors.page_background) {
+        var css =
+          '.auth0-lock.auth0-lock .auth0-lock-overlay { background: ' +
+          colors.page_background +
+          ' }';
+        var style = document.createElement('style');
+        style.appendChild(document.createTextNode(css));
+
+        document.body.appendChild(style);
+      }
+
+      lock.show();
+
+      function initLock(commonConfig) {
+        Object.assign(commonConfig, {
+          _enableIdPInitiatedLogin: true,
+          container: 'root',
+          initialScreen:
+            config.extraParams.screen_hint === 'signup' ? 'signUp' : 'login',
+          additionalSignUpFields: [
+            {
+              name: 'given_name',
+              placeholder: 'first name',
+              validator: function (value) {
+                return {
+                  valid: value.length > 0 && value.length <= 25,
+                  hint: 'Must be between 1 and 25 characters'
+                };
+              }
+            },
+            {
+              name: 'family_name',
+              placeholder: 'last name',
+              validator: function (value) {
+                return {
+                  valid: value.length > 0 && value.length <= 25,
+                  hint: 'Must be between 1 and 25 characters'
+                };
+              }
+            }
+          ]
+        });
+        var clientID = config.clientID;
+        var domain = config.auth0Domain;
+        return new Auth0Lock(clientID, domain, commonConfig);
+      }
+
+      function initLockPwdless(commonConfig) {
+        Object.assign(commonConfig, {
+          _enableIdPInitiatedLogin: true,
+          container: 'root',
+          passwordlessMethod: 'link' // 'code'
+        });
+        var clientID = config.clientID;
+        var domain = config.auth0Domain;
+        return new Auth0LockPasswordless(clientID, domain, commonConfig);
+      }
+    </script>
+  </body>
+</html>

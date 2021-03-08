@@ -1,0 +1,10 @@
+{
+  "template": "enrollment_email",
+  "from": "{{ application.name }} <no-reply@letsdoauth.com>",
+  "subject": "Guardian Enrollment Email",
+  "syntax": "liquid",
+  "body": "./enrollment_email.html",
+  "resultUrl": "",
+  "urlLifetimeInSeconds": 432000,
+  "enabled": true
+}

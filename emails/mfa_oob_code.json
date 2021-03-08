@@ -1,0 +1,10 @@
+{
+  "template": "mfa_oob_code",
+  "from": "{{ application.name }} <no-reply@letsdoauth.com>",
+  "subject": "Verification Code for Email MFA",
+  "syntax": "liquid",
+  "body": "./mfa_oob_code.html",
+  "resultUrl": "",
+  "urlLifetimeInSeconds": 432000,
+  "enabled": true
+}
