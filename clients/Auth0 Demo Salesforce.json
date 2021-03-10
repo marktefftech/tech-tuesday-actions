@@ -20,7 +20,7 @@
   "description": "Auth0 SAML Salesforce integration application.",
   "logo_uri": "",
   "sso": false,
-  "allowed_logout_urls": [],
+  "allowed_logout_urls": ["http://localhost:3000"],
   "allowed_clients": [],
   "client_metadata": {},
   "native_social_login": {
