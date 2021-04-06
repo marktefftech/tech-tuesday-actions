@@ -25,5 +25,8 @@
       "page_background": "#141E30",
       "primary": "#635DFF"
     }
+  },
+  "session_cookie": {
+    "mode": "non-persistent"
   }
 }
