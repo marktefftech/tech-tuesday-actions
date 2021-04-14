@@ -3,6 +3,7 @@
   "default_directory": "",
   "enabled_locales": ["en"],
   "flags": {
+    "dashboard_log_streams_next": true,
     "dashboard_security_center": true,
     "dashboard_ui_next": true,
     "disable_clickjack_protection_headers": false,
