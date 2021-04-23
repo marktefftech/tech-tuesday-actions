@@ -40,7 +40,7 @@
   },
   "custom_login_page": "",
   "organization_require_behavior": "no_prompt",
-  "organization_usage": "deny",
+  "organization_usage": "allow",
   "allowed_origins": [],
   "jwt_configuration": {
     "alg": "RS256",
