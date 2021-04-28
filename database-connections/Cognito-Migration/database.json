@@ -38,5 +38,5 @@
   "name": "Cognito-Migration",
   "is_domain_connection": false,
   "realms": ["Cognito-Migration"],
-  "enabled_clients": ["Auth0 Demo SPA"]
+  "enabled_clients": []
 }
