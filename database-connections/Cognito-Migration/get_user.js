@@ -27,7 +27,10 @@ async function getUser(email, callback) {
 
   const result = new Promise((resolve, reject) => {
     provider.adminGetUser(params, (err, data) => {
-      if (err) return reject(err);
+      if (err) {
+        reject(err);
+        return;
+      }
       const attrs = data.UserAttributes;
       const email = cognitoGetUserAttr(attrs, 'email');
       const email_verified = cognitoGetUserAttr(attrs, 'email_verified');
