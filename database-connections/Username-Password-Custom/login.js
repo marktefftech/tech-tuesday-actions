@@ -10,11 +10,11 @@ async function login(email, password, callback) {
   const fetch = require('node-fetch@2.6.0');
   const { URL } = require('url');
 
-  const DOMAIN_API = '##DOMAIN_API##';
-  const DOMAIN_AUTH0 = '##DOMAIN_AUTH0##';
-  const JWT_AUDIENCE = '##JWT_AUDIENCE##';
-  const JWT_CLIENT_ID = '##JWT_CLIENT_ID##';
-  const JWT_CLIENT_SECRET = '##JWT_CLIENT_SECRET##';
+  const DOMAIN_API = configuration.DOMAIN_API;
+  const DOMAIN_AUTH0 = configuration.DOMAIN_AUTH0;
+  const JWT_AUDIENCE = configuration.JWT_AUDIENCE;
+  const JWT_CLIENT_ID = configuration.JWT_CLIENT_ID;
+  const JWT_CLIENT_SECRET = configuration.JWT_CLIENT_SECRET;
 
   try {
     const jwt = await requestJwt();
