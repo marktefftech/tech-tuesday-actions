@@ -24,7 +24,7 @@ async function changeEmail(email, newEmail, verified, callback) {
         Username: email,
         UserAttributes: [
           { Name: 'email', Value: newEmail },
-          { Name: 'email_verified', Value: '' + verified }
+          { Name: 'email_verified', Value: `${verified}` }
         ]
       };
       provider.adminUpdateUserAttributes(params, (err, data) =>

@@ -23,7 +23,7 @@ async function remove(user_id, callback) {
       const params = {
         UserPoolId: configuration.AWS_COGNITO_POOL_ID,
         AttributesToGet: ['email'],
-        Filter: 'sub="' + user_id + '"'
+        Filter: `sub="${user_id}"`
       };
       provider.listUsers(params, (err, data) => {
         if (err) {
