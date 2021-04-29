@@ -27,11 +27,10 @@
     "enabledDatabaseCustomization": false
   },
   "strategy": "auth0",
-  "name": "Username-Password-Authentication",
+  "name": "username-password-authentication",
   "is_domain_connection": false,
-  "realms": ["Username-Password-Authentication"],
+  "realms": ["username-password-authentication"],
   "enabled_clients": [
-    "Auth0 Delegated Admin",
     "Auth0 Demo Device Flow",
     "Auth0 Demo SPA",
     "Auth0 Demo Salesforce",

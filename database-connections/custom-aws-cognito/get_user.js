@@ -15,43 +15,40 @@ async function getUser(email, callback) {
     region: configuration.AWS_REGION
   });
 
-  const cognitoGetUserAttr = (attrs, name) =>
+  const getValue = (attrs, name) =>
     attrs.find((item) => item.Name === name).Value;
 
   const provider = new AWS.CognitoIdentityServiceProvider();
 
-  const params = {
-    UserPoolId: configuration.AWS_COGNITO_POOL_ID,
-    Username: email
-  };
-
-  const result = new Promise((resolve, reject) => {
-    provider.adminGetUser(params, (err, data) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-      const attrs = data.UserAttributes;
-      const email = cognitoGetUserAttr(attrs, 'email');
-      const email_verified = cognitoGetUserAttr(attrs, 'email_verified');
-      const user_id = cognitoGetUserAttr(attrs, 'sub');
-      const profile = {
-        email: email,
-        email_verified: email_verified,
-        user_id: user_id
+  const getUser = () =>
+    new Promise((resolve, reject) => {
+      const params = {
+        UserPoolId: configuration.AWS_COGNITO_POOL_ID,
+        Username: email
       };
-      resolve(profile);
+      provider.adminGetUser(params, (err, data) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        const attrs = data.UserAttributes;
+        const profile = {
+          email: getValue(attrs, 'email'),
+          email_verified: getValue(attrs, 'email_verified'),
+          user_id: getValue(attrs, 'sub')
+        };
+        resolve(profile);
+      });
     });
-  });
 
   try {
-    const profile = await result;
+    const profile = await getUser();
     callback(null, profile);
   } catch (err) {
     if (err.code === 'UserNotFoundException') {
       callback(null);
     } else {
-      callback(new Error(err));
+      callback(new Error(err.message));
     }
   }
 }

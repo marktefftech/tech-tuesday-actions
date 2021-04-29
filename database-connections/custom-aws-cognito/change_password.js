@@ -17,27 +17,27 @@ async function changePassword(email, newPassword, callback) {
 
   const provider = new AWS.CognitoIdentityServiceProvider();
 
-  const params = {
-    UserPoolId: configuration.AWS_COGNITO_POOL_ID,
-    Username: email,
-    Password: newPassword,
-    Permanent: true
-  };
-
-  const result = new Promise((resolve, reject) => {
-    provider.adminSetUserPassword(params, (err, data) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-      resolve(data);
+  const setUserPassword = () =>
+    new Promise((resolve, reject) => {
+      const params = {
+        UserPoolId: configuration.AWS_COGNITO_POOL_ID,
+        Username: email,
+        Password: newPassword,
+        Permanent: true
+      };
+      provider.adminSetUserPassword(params, (err, data) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        resolve(data);
+      });
     });
-  });
 
   try {
-    await result;
+    await setUserPassword();
     callback(null, true);
   } catch (err) {
-    callback(new Error(err));
+    callback(new Error(err.message));
   }
 }

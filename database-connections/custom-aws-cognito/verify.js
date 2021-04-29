@@ -15,31 +15,26 @@ async function verify(email, callback) {
 
   const provider = new AWS.CognitoIdentityServiceProvider();
 
-  const params = {
-    UserPoolId: configuration.AWS_COGNITO_POOL_ID,
-    Username: email,
-    UserAttributes: [
-      {
-        Name: 'email_verified',
-        Value: 'true'
-      }
-    ]
-  };
-
-  const result = new Promise((resolve, reject) => {
-    provider.adminUpdateUserAttributes(params, (err, data) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-      resolve(data);
+  const updateUser = () =>
+    new Promise((resolve, reject) => {
+      const params = {
+        UserPoolId: configuration.AWS_COGNITO_POOL_ID,
+        Username: email,
+        UserAttributes: [{ Name: 'email_verified', Value: 'true' }]
+      };
+      provider.adminUpdateUserAttributes(params, (err, data) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        resolve(data);
+      });
     });
-  });
 
   try {
-    await result;
+    await updateUser();
     callback(null, true);
   } catch (err) {
-    callback(new Error(err));
+    callback(new Error(err.message));
   }
 }

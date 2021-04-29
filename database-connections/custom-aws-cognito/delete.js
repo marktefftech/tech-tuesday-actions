@@ -4,7 +4,7 @@
 // 2. Something went wrong while trying to reach your database:
 //    callback(new Error("my error message"));
 
-async function remove(email, callback) {
+async function remove(user_id, callback) {
   const AWS = require('aws-sdk@2.593.0');
 
   AWS.config.update({
@@ -15,25 +15,25 @@ async function remove(email, callback) {
 
   const provider = new AWS.CognitoIdentityServiceProvider();
 
-  const params = {
-    UserPoolId: configuration.AWS_COGNITO_POOL_ID,
-    Username: email
-  };
-
-  const result = new Promise((resolve, reject) => {
-    provider.adminDeleteUser(params, (err, data) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-      resolve(data);
+  const deleteUser = () =>
+    new Promise((resolve, reject) => {
+      const params = {
+        UserPoolId: configuration.AWS_COGNITO_POOL_ID,
+        Username: email
+      };
+      provider.adminDeleteUser(params, (err, data) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        resolve(data);
+      });
     });
-  });
 
   try {
-    await result;
+    await deleteUser();
     callback(null);
   } catch (err) {
-    callback(new Error(err));
+    callback(new Error(err.message));
   }
 }

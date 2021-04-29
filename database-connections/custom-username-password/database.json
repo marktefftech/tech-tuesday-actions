@@ -36,8 +36,8 @@
     "enabledDatabaseCustomization": true
   },
   "strategy": "auth0",
-  "name": "Username-Password-Custom",
+  "name": "custom-username-password",
   "is_domain_connection": false,
-  "realms": ["Username-Password-Custom"],
+  "realms": ["custom-username-password"],
   "enabled_clients": []
 }

@@ -35,8 +35,8 @@
     "enabledDatabaseCustomization": true
   },
   "strategy": "auth0",
-  "name": "Cognito-Migration",
+  "name": "custom-aws-cognito",
   "is_domain_connection": false,
-  "realms": ["Cognito-Migration"],
+  "realms": ["custom-aws-cognito"],
   "enabled_clients": []
 }
