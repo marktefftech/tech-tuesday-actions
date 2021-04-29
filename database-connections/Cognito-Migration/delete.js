@@ -1,15 +1,39 @@
-function remove(id, callback) {
-  // This script remove a user from your existing database.
-  // It is executed whenever a user is deleted from the API or Auth0 dashboard.
-  //
-  // There are two ways that this script can finish:
-  // 1. The user was removed successfully:
-  //     callback(null);
-  // 2. Something went wrong while trying to reach your database:
-  //     callback(new Error("my error message"));
+// There are two ways this script can finish:
+// 1. The user was removed successfully:
+//    callback(null);
+// 2. Something went wrong while trying to reach your database:
+//    callback(new Error("my error message"));
 
-  const msg =
-    'Please implement the Delete script for this database ' +
-    'connection at https://manage.auth0.com/#/connections/database';
-  return callback(new Error(msg));
+async function remove(email, callback) {
+  const AWS = require('aws-sdk@2.593.0');
+
+  AWS.config.update({
+    accessKeyId: configuration.AWS_ACCESS_KEY_ID,
+    secretAccessKey: configuration.AWS_SECRET_ACCESS_KEY,
+    region: configuration.AWS_REGION
+  });
+
+  const provider = new AWS.CognitoIdentityServiceProvider();
+
+  const params = {
+    UserPoolId: configuration.AWS_COGNITO_POOL_ID,
+    Username: email
+  };
+
+  const result = new Promise((resolve, reject) => {
+    provider.adminDeleteUser(params, (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve(data);
+    });
+  });
+
+  try {
+    await result;
+    callback(null);
+  } catch (err) {
+    callback(new Error(err));
+  }
 }

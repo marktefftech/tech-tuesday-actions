@@ -21,8 +21,8 @@ async function getUser(email, callback) {
   const provider = new AWS.CognitoIdentityServiceProvider();
 
   const params = {
-    Username: email,
-    UserPoolId: configuration.AWS_COGNITO_POOL_ID
+    UserPoolId: configuration.AWS_COGNITO_POOL_ID,
+    Username: email
   };
 
   const result = new Promise((resolve, reject) => {
@@ -48,6 +48,10 @@ async function getUser(email, callback) {
     const profile = await result;
     callback(null, profile);
   } catch (err) {
-    callback(new Error(err));
+    if (err.code === 'UserNotFoundException') {
+      callback(null);
+    } else {
+      callback(new Error(err));
+    }
   }
 }
