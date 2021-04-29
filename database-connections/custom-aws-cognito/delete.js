@@ -18,7 +18,7 @@ async function remove(user_id, callback) {
 
   const provider = new AWS.CognitoIdentityServiceProvider();
 
-  const listUser = () =>
+  const getUserById = () =>
     new Promise((resolve, reject) => {
       const params = {
         UserPoolId: configuration.AWS_COGNITO_POOL_ID,
@@ -54,7 +54,7 @@ async function remove(user_id, callback) {
     });
 
   try {
-    const user = await listUser();
+    const user = await getUserById();
     const email = getValue(user.Attributes, 'email');
     await deleteUser(email);
     callback(null);
