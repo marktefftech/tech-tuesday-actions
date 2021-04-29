@@ -4,7 +4,7 @@
 // 2. Something went wrong while trying to reach your database:
 //    callback(new Error("my error message"));
 
-async function remove(id, callback) {
+async function remove(user_id, callback) {
   const fetch = require('node-fetch@2.6.0');
   const { URL } = require('url');
 
@@ -17,7 +17,7 @@ async function remove(id, callback) {
   try {
     const jwt = await requestJwt();
 
-    const url = new URL(`https://${DOMAIN_API}/api/databases/users/${id}`);
+    const url = new URL(`https://${DOMAIN_API}/api/databases/users/${user_id}`);
 
     const res = await fetch(url, {
       method: 'DELETE',
