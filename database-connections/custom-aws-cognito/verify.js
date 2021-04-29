@@ -22,13 +22,9 @@ async function verify(email, callback) {
         Username: email,
         UserAttributes: [{ Name: 'email_verified', Value: 'true' }]
       };
-      provider.adminUpdateUserAttributes(params, (err, data) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve(data);
-      });
+      provider.adminUpdateUserAttributes(params, (err, data) =>
+        err ? reject(err) : resolve(data)
+      );
     });
 
   try {

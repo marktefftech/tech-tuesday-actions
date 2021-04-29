@@ -24,13 +24,9 @@ async function create(user, callback) {
         Password: user.password,
         Username: user.email
       };
-      provider.signUp(params, (err, data) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve(data);
-      });
+      provider.signUp(params, (err, data) =>
+        err ? reject(err) : resolve(data)
+      );
     });
 
   const confirmSignUp = () =>
@@ -39,13 +35,9 @@ async function create(user, callback) {
         UserPoolId: configuration.AWS_COGNITO_POOL_ID,
         Username: user.email
       };
-      provider.adminConfirmSignUp(params, (err, data) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve(data);
-      });
+      provider.adminConfirmSignUp(params, (err, data) =>
+        err ? reject(err) : resolve(data)
+      );
     });
 
   try {

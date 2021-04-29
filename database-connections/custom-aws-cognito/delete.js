@@ -48,13 +48,9 @@ async function remove(user_id, callback) {
         UserPoolId: configuration.AWS_COGNITO_POOL_ID,
         Username: email
       };
-      provider.adminDeleteUser(params, (err, data) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve(data);
-      });
+      provider.adminDeleteUser(params, (err, data) =>
+        err ? reject(err) : resolve(data)
+      );
     });
 
   try {

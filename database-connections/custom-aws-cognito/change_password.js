@@ -25,13 +25,9 @@ async function changePassword(email, newPassword, callback) {
         Password: newPassword,
         Permanent: true
       };
-      provider.adminSetUserPassword(params, (err, data) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve(data);
-      });
+      provider.adminSetUserPassword(params, (err, data) =>
+        err ? reject(err) : resolve(data)
+      );
     });
 
   try {
