@@ -10,9 +10,9 @@ async function create(user, callback) {
   const AWS = require('aws-sdk@2.593.0');
 
   AWS.config.update({
+    region: configuration.AWS_REGION,
     accessKeyId: configuration.AWS_ACCESS_KEY_ID,
-    secretAccessKey: configuration.AWS_SECRET_ACCESS_KEY,
-    region: configuration.AWS_REGION
+    secretAccessKey: configuration.AWS_SECRET_ACCESS_KEY
   });
 
   const provider = new AWS.CognitoIdentityServiceProvider();

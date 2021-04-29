@@ -28,20 +28,20 @@ async function login(email, password, callback) {
       cognitoUser.authenticateUser(authDetails, {
         onSuccess: (result) => {
           const { email, email_verified, sub } = result.getIdToken().payload;
-          const profile = {
+          const user = {
             email: email,
             email_verified: email_verified,
             user_id: sub
           };
-          resolve(profile);
+          resolve(user);
         },
         onFailure: (err) => reject(err)
       })
     );
 
   try {
-    const profile = await login();
-    callback(null, profile);
+    const user = await login();
+    callback(null, user);
   } catch (err) {
     callback(new Error(err.message));
   }

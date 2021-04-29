@@ -10,9 +10,9 @@ async function getUser(email, callback) {
   const AWS = require('aws-sdk@2.593.0');
 
   AWS.config.update({
+    region: configuration.AWS_REGION,
     accessKeyId: configuration.AWS_ACCESS_KEY_ID,
-    secretAccessKey: configuration.AWS_SECRET_ACCESS_KEY,
-    region: configuration.AWS_REGION
+    secretAccessKey: configuration.AWS_SECRET_ACCESS_KEY
   });
 
   const getValue = (attrs, name) =>
@@ -32,18 +32,18 @@ async function getUser(email, callback) {
           return;
         }
         const attrs = data.UserAttributes;
-        const profile = {
+        const user = {
           email: getValue(attrs, 'email'),
           email_verified: getValue(attrs, 'email_verified'),
           user_id: getValue(attrs, 'sub')
         };
-        resolve(profile);
+        resolve(user);
       });
     });
 
   try {
-    const profile = await getUser();
-    callback(null, profile);
+    const user = await getUser();
+    callback(null, user);
   } catch (err) {
     if (err.code === 'UserNotFoundException') {
       callback(null);
