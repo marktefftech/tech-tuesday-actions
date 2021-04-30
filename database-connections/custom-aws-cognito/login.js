@@ -23,17 +23,16 @@ async function login(email, password, callback) {
   const userData = { Username: email, Pool: userPool };
   const cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
 
+  const userProps = ['email', 'email_verified'];
+
   const login = () =>
     new Promise((resolve, reject) =>
       cognitoUser.authenticateUser(authDetails, {
         onSuccess: (result) => {
-          const { email, email_verified, sub } = result.getIdToken().payload;
-          const user = {
-            email: email,
-            email_verified: email_verified,
-            user_id: sub
-          };
-          resolve(user);
+          const id_token = result.getIdToken();
+          const userProfile = { user_id: id_token.payload.sub };
+          userProps.forEach((i) => (userProfile[i] = id_token.payload[i]));
+          resolve(userProfile);
         },
         onFailure: (err) => reject(err)
       })

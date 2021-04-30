@@ -17,8 +17,10 @@ async function getUser(email, callback) {
 
   const provider = new AWS.CognitoIdentityServiceProvider();
 
-  const getValue = (attrs, name) =>
+  const getAttrValue = (attrs, name) =>
     attrs.find((item) => item.Name === name).Value;
+
+  const userProps = ['email', 'email_verified'];
 
   const getUser = () =>
     new Promise((resolve, reject) => {
@@ -31,13 +33,10 @@ async function getUser(email, callback) {
           reject(err);
           return;
         }
-        const attrs = data.UserAttributes;
-        const user = {
-          email: getValue(attrs, 'email'),
-          email_verified: getValue(attrs, 'email_verified'),
-          user_id: getValue(attrs, 'sub')
-        };
-        resolve(user);
+        const userAttrs = data.UserAttributes;
+        const userProfile = { user_id: getAttrValue(userAttrs, 'sub') };
+        userProps.forEach((i) => (userProfile[i] = getAttrValue(userAttrs, i)));
+        resolve(userProfile);
       });
     });
 

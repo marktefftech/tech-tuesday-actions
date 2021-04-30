@@ -15,7 +15,7 @@ async function remove(user_id, callback) {
 
   const provider = new AWS.CognitoIdentityServiceProvider();
 
-  const getValue = (attrs, name) =>
+  const getAttrValue = (attrs, name) =>
     attrs.find((item) => item.Name === name).Value;
 
   const getUserById = () =>
@@ -55,7 +55,7 @@ async function remove(user_id, callback) {
 
   try {
     const user = await getUserById();
-    const email = getValue(user.Attributes, 'email');
+    const email = getAttrValue(user.Attributes, 'email');
     await deleteUser(email);
     callback(null);
   } catch (err) {
