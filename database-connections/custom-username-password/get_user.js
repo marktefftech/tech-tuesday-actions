@@ -8,18 +8,11 @@
 
 async function getUser(email, callback) {
   const fetch = require('node-fetch@2.6.0');
-  const { URL } = require('url');
-
-  const DOMAIN_API = configuration.DOMAIN_API;
-  const DOMAIN_AUTH0 = configuration.DOMAIN_AUTH0;
-  const JWT_AUDIENCE = configuration.JWT_AUDIENCE;
-  const JWT_CLIENT_ID = configuration.JWT_CLIENT_ID;
-  const JWT_CLIENT_SECRET = configuration.JWT_CLIENT_SECRET;
 
   try {
     const jwt = await requestJwt();
 
-    const url = new URL(`https://${DOMAIN_API}/api/databases/users/${email}`);
+    const url = `https://${configuration.DOMAIN_API}/api/databases/users/${email}`;
 
     const res = await fetch(url, {
       method: 'GET',
@@ -50,7 +43,7 @@ async function getUser(email, callback) {
   }
 
   async function requestJwt() {
-    const url = new URL(`https://${DOMAIN_AUTH0}/oauth/token`);
+    const url = `https://${configuration.DOMAIN_AUTH0}/oauth/token`;
 
     const res = await fetch(url, {
       method: 'POST',
@@ -59,9 +52,9 @@ async function getUser(email, callback) {
       },
       body: JSON.stringify({
         grant_type: 'client_credentials',
-        client_id: JWT_CLIENT_ID,
-        client_secret: JWT_CLIENT_SECRET,
-        audience: JWT_AUDIENCE
+        client_id: configuration.JWT_CLIENT_ID,
+        client_secret: configuration.JWT_CLIENT_SECRET,
+        audience: configuration.JWT_AUDIENCE
       })
     });
 
