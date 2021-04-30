@@ -15,10 +15,10 @@ async function getUser(email, callback) {
     secretAccessKey: configuration.AWS_SECRET_ACCESS_KEY
   });
 
+  const provider = new AWS.CognitoIdentityServiceProvider();
+
   const getValue = (attrs, name) =>
     attrs.find((item) => item.Name === name).Value;
-
-  const provider = new AWS.CognitoIdentityServiceProvider();
 
   const getUser = () =>
     new Promise((resolve, reject) => {

@@ -13,10 +13,10 @@ async function remove(user_id, callback) {
     secretAccessKey: configuration.AWS_SECRET_ACCESS_KEY
   });
 
+  const provider = new AWS.CognitoIdentityServiceProvider();
+
   const getValue = (attrs, name) =>
     attrs.find((item) => item.Name === name).Value;
-
-  const provider = new AWS.CognitoIdentityServiceProvider();
 
   const getUserById = () =>
     new Promise((resolve, reject) => {
