@@ -30,7 +30,7 @@ async function remove(user_id, callback) {
           reject(err);
           return;
         }
-        if (data.Users.length == 0) {
+        if (data.Users.length === 0) {
           reject(new Error('User not found.'));
           return;
         }
