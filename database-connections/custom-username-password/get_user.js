@@ -10,31 +10,32 @@ async function getUser(email, callback) {
   const fetch = require('node-fetch@2.6.0');
 
   try {
-    const jwt = await requestJwt();
+    const token = await getToken();
 
     const url = `https://${configuration.DOMAIN_API}/api/databases/users/${email}`;
 
     const res = await fetch(url, {
       method: 'GET',
       headers: {
-        Authorization: `Bearer ${jwt}`
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
       }
     });
 
-    const body = await res.text();
-
     if (!res.ok) {
-      const error = JSON.parse(body);
+      const error = await res.json();
       callback(new Error(error.message));
       return;
     }
 
-    if (body.length === 0) {
+    const text = await res.text();
+
+    if (text.length === 0) {
       callback(null);
       return;
     }
 
-    const user = JSON.parse(body);
+    const user = JSON.parse(text);
     user.user_id = user._id.toString();
 
     callback(null, user);
@@ -42,7 +43,7 @@ async function getUser(email, callback) {
     callback(err);
   }
 
-  async function requestJwt() {
+  const getToken = async () => {
     const url = `https://${configuration.DOMAIN_AUTH0}/oauth/token`;
 
     const res = await fetch(url, {
@@ -60,6 +61,10 @@ async function getUser(email, callback) {
 
     const body = await res.json();
 
+    if (!res.ok) {
+      throw new Error(body.message);
+    }
+
     return body.access_token;
-  }
+  };
 }

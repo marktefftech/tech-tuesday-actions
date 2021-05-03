@@ -10,23 +10,21 @@ async function create(user, callback) {
   const fetch = require('node-fetch@2.6.0');
 
   try {
-    const jwt = await requestJwt();
+    const token = await getToken();
 
     const url = `https://${configuration.DOMAIN_API}/api/databases/users`;
 
     const res = await fetch(url, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${jwt}`,
+        Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(user)
     });
 
-    const body = await res.text();
-
     if (!res.ok) {
-      const error = JSON.parse(body);
+      const error = await res.json();
       callback(new Error(error.message));
       return;
     }
@@ -36,7 +34,7 @@ async function create(user, callback) {
     callback(err);
   }
 
-  async function requestJwt() {
+  const getToken = async () => {
     const url = `https://${configuration.DOMAIN_AUTH0}/oauth/token`;
 
     const res = await fetch(url, {
@@ -54,6 +52,10 @@ async function create(user, callback) {
 
     const body = await res.json();
 
+    if (!res.ok) {
+      throw new Error(body.message);
+    }
+
     return body.access_token;
-  }
+  };
 }

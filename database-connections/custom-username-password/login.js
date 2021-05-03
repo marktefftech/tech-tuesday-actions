@@ -10,14 +10,14 @@ async function login(email, password, callback) {
   const fetch = require('node-fetch@2.6.0');
 
   try {
-    const jwt = await requestJwt();
+    const token = await getToken();
 
     const url = `https://${configuration.DOMAIN_API}/api/databases/users/${email}/login`;
 
     const res = await fetch(url, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${jwt}`,
+        Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -25,15 +25,20 @@ async function login(email, password, callback) {
       })
     });
 
-    const body = await res.text();
-
     if (!res.ok) {
-      const error = JSON.parse(body);
+      const error = await res.json();
       callback(new Error(error.message));
       return;
     }
 
-    const user = JSON.parse(body);
+    const text = await res.text();
+
+    if (text.length === 0) {
+      callback(null);
+      return;
+    }
+
+    const user = JSON.parse(text);
     user.user_id = user._id.toString();
 
     callback(null, user);
@@ -41,7 +46,7 @@ async function login(email, password, callback) {
     callback(err);
   }
 
-  async function requestJwt() {
+  const getToken = async () => {
     const url = `https://${configuration.DOMAIN_AUTH0}/oauth/token`;
 
     const res = await fetch(url, {
@@ -59,6 +64,10 @@ async function login(email, password, callback) {
 
     const body = await res.json();
 
+    if (!res.ok) {
+      throw new Error(body.message);
+    }
+
     return body.access_token;
-  }
+  };
 }
