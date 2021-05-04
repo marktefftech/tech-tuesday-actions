@@ -1,7 +1,0 @@
-{
-  "enabled": true,
-  "script": "./rd-add-custom-claims.js",
-  "name": "rd-add-custom-claims",
-  "order": 30,
-  "stage": "login_success"
-}
