@@ -1,7 +1,0 @@
-{
-  "enabled": true,
-  "script": "./rd-mfa-session.js",
-  "name": "rd-mfa-session",
-  "order": 10,
-  "stage": "login_success"
-}
