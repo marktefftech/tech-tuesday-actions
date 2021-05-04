@@ -10,7 +10,7 @@ async function multiFactorSession(user, context, callback) {
   user.app_metadata = user.app_metadata || {};
 
   const {
-    app_metadata: { enableMfa = false }
+    app_metadata: { enable_mfa: enableMfa = false }
   } = user;
 
   // check if MFA enabled for user
