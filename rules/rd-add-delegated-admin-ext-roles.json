@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "script": "./rd-add-delegated-admin-ext-roles.js",
   "name": "rd-add-delegated-admin-ext-roles",
   "order": 40,
