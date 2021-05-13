@@ -1,4 +1,4 @@
-async function boostrap(user, context, callback) {
+async function roleAssignment(user, context, callback) {
   const NS = 'https://letsdoauth.com';
   context.authorization = context.authorization || {};
 
