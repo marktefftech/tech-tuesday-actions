@@ -30,5 +30,5 @@
   "is_domain_connection": false,
   "display_name": "Auth0 SAML",
   "show_as_button": false,
-  "enabled_clients": ["Auth0 Demo SPA", "Auth0 Demo Web App"]
+  "enabled_clients": []
 }

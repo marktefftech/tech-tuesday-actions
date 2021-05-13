@@ -33,5 +33,5 @@
   "name": "dahbura-saml-okta",
   "is_domain_connection": false,
   "display_name": "Okta SAML",
-  "enabled_clients": []
+  "enabled_clients": ["Auth0 Demo SPA", "Auth0 Demo Web App"]
 }
