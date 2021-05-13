@@ -30,5 +30,6 @@
   "strategy": "waad",
   "name": "dahbura-aad-rdahbura",
   "is_domain_connection": false,
+  "show_as_button": false,
   "enabled_clients": []
 }

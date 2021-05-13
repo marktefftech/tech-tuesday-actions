@@ -32,6 +32,7 @@
   "strategy": "samlp",
   "name": "dahbura-saml-okta",
   "is_domain_connection": false,
+  "show_as_button": false,
   "display_name": "Okta SAML",
   "enabled_clients": ["Auth0 Demo SPA", "Auth0 Demo Web App"]
 }

@@ -27,6 +27,7 @@
   "strategy": "samlp",
   "name": "dahbura-saml-adfs-dc",
   "is_domain_connection": false,
+  "show_as_button": false,
   "display_name": "ADFS SAML",
   "enabled_clients": []
 }
