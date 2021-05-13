@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "script": "./rd-mfa-step-up.js",
   "name": "rd-mfa-step-up",
   "order": 15,
