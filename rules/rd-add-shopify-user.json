@@ -1,7 +1,0 @@
-{
-  "enabled": false,
-  "script": "./rd-add-shopify-user.js",
-  "name": "rd-add-shopify-user",
-  "order": 100,
-  "stage": "login_success"
-}
