@@ -18,6 +18,7 @@
   },
   "friendly_name": "Let's Do Auth",
   "idle_session_lifetime": 72,
+  "picture_url": "https://dahbura.s3-us-west-2.amazonaws.com/images/logo-auth0-black.png",
   "session_lifetime": 168,
   "support_email": "",
   "support_url": "",
