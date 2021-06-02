@@ -22,6 +22,7 @@
       "client_authorizequery": "redirect_uri=http://localhost:3000/callback-idp"
     },
     "tenant_domain": "letsdoauth.com",
+    "disableSignout": false,
     "domain_aliases": ["letsdoauth.com"],
     "signInEndpoint": "https://dev-486296.oktapreview.com/app/letsdoauth_oktasaml_1/exkfsfoicwrDihfBy0h7/sso/saml",
     "digestAlgorithm": "sha256",
