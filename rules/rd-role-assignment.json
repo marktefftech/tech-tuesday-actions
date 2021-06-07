@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "script": "./rd-role-assignment.js",
   "name": "rd-role-assignment",
   "order": 5,
