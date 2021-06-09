@@ -29,6 +29,6 @@
     }
   },
   "session_cookie": {
-    "mode": "non-persistent"
+    "mode": "persistent"
   }
 }
