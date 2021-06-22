@@ -1,0 +1,14 @@
+{
+  "name": "Enable MFA Step Up",
+  "code": "tenant/actions/Enable MFA Step Up/code.js",
+  "status": "built",
+  "dependencies": [],
+  "secrets": [],
+  "supported_triggers": [
+    {
+      "id": "post-login",
+      "version": "v2"
+    }
+  ],
+  "deployed": true
+}

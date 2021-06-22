@@ -1,0 +1,32 @@
+{
+  "name": "Send Phone Message",
+  "code": "tenant/actions/Send Phone Message/code.js",
+  "status": "built",
+  "dependencies": [
+    {
+      "name": "aws-sdk",
+      "version": "2.923.0"
+    }
+  ],
+  "secrets": [
+    {
+      "name": "AWS_REGION",
+      "value": "_VALUE_NOT_SHOWN_"
+    },
+    {
+      "name": "AWS_ACCESS_KEY_ID",
+      "value": "_VALUE_NOT_SHOWN_"
+    },
+    {
+      "name": "AWS_SECRET_ACCESS_KEY",
+      "value": "_VALUE_NOT_SHOWN_"
+    }
+  ],
+  "supported_triggers": [
+    {
+      "id": "send-phone-message",
+      "version": "v2"
+    }
+  ],
+  "deployed": true
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Link Accounts",
+  "code": "tenant/actions/Link Accounts/code.js",
+  "status": "built",
+  "dependencies": [
+    {
+      "name": "auth0",
+      "version": "2.35.0"
+    }
+  ],
+  "secrets": [
+    {
+      "name": "DOMAIN",
+      "value": "_VALUE_NOT_SHOWN_"
+    },
+    {
+      "name": "CLIENT_ID",
+      "value": "_VALUE_NOT_SHOWN_"
+    },
+    {
+      "name": "CLIENT_SECRET",
+      "value": "_VALUE_NOT_SHOWN_"
+    }
+  ],
+  "supported_triggers": [
+    {
+      "id": "post-login",
+      "version": "v2"
+    }
+  ],
+  "deployed": true
+}

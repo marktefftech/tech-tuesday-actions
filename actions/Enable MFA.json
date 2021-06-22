@@ -1,0 +1,14 @@
+{
+  "name": "Enable MFA",
+  "code": "tenant/actions/Enable MFA/code.js",
+  "status": "built",
+  "dependencies": [],
+  "secrets": [],
+  "supported_triggers": [
+    {
+      "id": "post-login",
+      "version": "v2"
+    }
+  ],
+  "deployed": true
+}

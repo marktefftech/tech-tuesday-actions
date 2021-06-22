@@ -1,0 +1,19 @@
+{
+  "name": "Add Custom Claims",
+  "code": "tenant/actions/Add Custom Claims/code.js",
+  "status": "built",
+  "dependencies": [
+    {
+      "name": "auth0",
+      "version": "2.35.0"
+    }
+  ],
+  "secrets": [],
+  "supported_triggers": [
+    {
+      "id": "post-login",
+      "version": "v2"
+    }
+  ],
+  "deployed": true
+}

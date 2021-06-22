@@ -1,0 +1,36 @@
+{
+  "name": "Add Roles to User",
+  "code": "tenant/actions/Add Roles to User/code.js",
+  "status": "built",
+  "dependencies": [
+    {
+      "name": "@aws-sdk/client-elasticache",
+      "version": "3.17.0"
+    },
+    {
+      "name": "auth0",
+      "version": "2.35.0"
+    }
+  ],
+  "secrets": [
+    {
+      "name": "CLIENT_SECRET",
+      "value": "_VALUE_NOT_SHOWN_"
+    },
+    {
+      "name": "CLIENT_ID",
+      "value": "_VALUE_NOT_SHOWN_"
+    },
+    {
+      "name": "DOMAIN",
+      "value": "_VALUE_NOT_SHOWN_"
+    }
+  ],
+  "supported_triggers": [
+    {
+      "id": "post-login",
+      "version": "v2"
+    }
+  ],
+  "deployed": true
+}

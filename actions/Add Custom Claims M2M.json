@@ -1,0 +1,14 @@
+{
+  "name": "Add Custom Claims M2M",
+  "code": "tenant/actions/Add Custom Claims M2M/code.js",
+  "status": "built",
+  "dependencies": [],
+  "secrets": [],
+  "supported_triggers": [
+    {
+      "id": "credentials-exchange",
+      "version": "v2"
+    }
+  ],
+  "deployed": true
+}
