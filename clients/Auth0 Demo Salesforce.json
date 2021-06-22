@@ -7,13 +7,14 @@
   "cross_origin_auth": false,
   "addons": {
     "samlp": {
-      "mappings": {
-        "email": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"
-      },
-      "audience": "https://rudydahbura-dev-ed.my.salesforce.com",
       "mapIdentities": false,
       "mapUnknownClaimsAsIs": false,
-      "passthroughClaimsWithNoMapping": true
+      "passthroughClaimsWithNoMapping": true,
+      "audience": "https://rudydahbura-dev-ed.my.salesforce.com",
+      "nameIdentifierFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+      "mappings": {
+        "email": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"
+      }
     }
   },
   "callbacks": ["https://rudydahbura-dev-ed.my.salesforce.com"],
