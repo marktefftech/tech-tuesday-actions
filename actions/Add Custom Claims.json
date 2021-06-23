@@ -1,6 +1,6 @@
 {
   "name": "Add Custom Claims",
-  "code": "tenant/actions/Add Custom Claims/code.js",
+  "code": "rudydahbura.auth0.com/actions/Add Custom Claims/code.js",
   "status": "built",
   "dependencies": [
     {

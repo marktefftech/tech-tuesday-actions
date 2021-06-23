@@ -1,6 +1,6 @@
 {
   "name": "Send Phone Message",
-  "code": "tenant/actions/Send Phone Message/code.js",
+  "code": "rudydahbura.auth0.com/actions/Send Phone Message/code.js",
   "status": "built",
   "dependencies": [
     {
