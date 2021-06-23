@@ -35,7 +35,7 @@ exports.onExecutePostLogin = async (event, api) => {
     return;
   }
 
-  // enable mfa
+  // enable MFA
 
   api.multifactor.enable('any', {
     allowRememberBrowser: false
