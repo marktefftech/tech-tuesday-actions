@@ -5,10 +5,7 @@
  * @param {PostLoginAPI} api - Interface whose methods can be used to change the behavior of the login.
  */
 exports.onExecutePostLogin = async (event, api) => {
-  const CLIENTS = [
-    "Auth0 Demo SPA",
-    "Auth0 Demo Web App"
-  ];
+  const CLIENTS = ['Auth0 Demo SPA', 'Auth0 Demo Web App'];
 
   // check if client is whitelisted
 
@@ -24,7 +21,7 @@ exports.onExecutePostLogin = async (event, api) => {
 
   if (
     !acrValues.includes(
-      "http://schemas.openid.net/pape/policies/2007/06/multi-factor"
+      'http://schemas.openid.net/pape/policies/2007/06/multi-factor'
     )
   ) {
     return;
@@ -32,8 +29,8 @@ exports.onExecutePostLogin = async (event, api) => {
 
   // enable mfa
 
-  api.multifactor.enable("any", {
-    allowRememberBrowser: false,
+  api.multifactor.enable('any', {
+    allowRememberBrowser: false
   });
 };
 

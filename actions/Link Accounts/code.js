@@ -14,20 +14,20 @@ exports.onExecutePostLogin = async (event, api) => {
       domain: event.secrets.DOMAIN,
       clientId: event.secrets.CLIENT_ID,
       clientSecret: event.secrets.CLIENT_SECRET,
-      scope: 'read:users',
+      scope: 'read:users'
     });
 
   const createToken = () => {
     var payload = {
       sub: event.user.user_id,
       email: event.user.email,
-      base: `https://${event.secrets.DOMAIN}`,
+      base: `https://${event.secrets.DOMAIN}`
     };
 
     var options = {
       expiresIn: '5m',
       audience: event.secrets.CLIENT_ID,
-      issuer: `https://idp.letsdoauth.com/`,
+      issuer: `https://idp.letsdoauth.com/`
     };
 
     return jwt.sign(payload, event.secrets.CLIENT_SECRET, options);
@@ -45,7 +45,7 @@ exports.onExecutePostLogin = async (event, api) => {
       auth0Client: query.auth0Client,
       original_state: query.original_state || query.state,
       nonce: query.nonce,
-      error_type: errorType,
+      error_type: errorType
     };
 
     return (
@@ -73,7 +73,7 @@ exports.onExecutePostLogin = async (event, api) => {
     .map((u) => ({
       email: u.email,
       user_id: u.user_id,
-      connections: u.identities.map((i) => i.connection),
+      connections: u.identities.map((i) => i.connection)
     }));
 
   const isUniqueUser = () => filteredUsers.length === 1;

@@ -5,10 +5,7 @@
  * @param {PostLoginAPI} api - Interface whose methods can be used to change the behavior of the login.
  */
 exports.onExecutePostLogin = async (event, api) => {
-  const CLIENTS = [
-    "Auth0 Demo SPA",
-    "Auth0 Demo Web App"
-  ];
+  const CLIENTS = ['Auth0 Demo SPA', 'Auth0 Demo Web App'];
 
   // check if client is whitelisted
 
@@ -16,7 +13,7 @@ exports.onExecutePostLogin = async (event, api) => {
     return;
   }
 
-  // check if mfa has been enabled
+  // check if MFA has been enabled
 
   const { enable_mfa: enableMfa = false } = event.user.app_metadata;
 
@@ -32,7 +29,7 @@ exports.onExecutePostLogin = async (event, api) => {
 
   const { methods = [] } = event.authentication;
 
-  const completedMfa = !!methods.find((method) => method.name === "mfa");
+  const completedMfa = !!methods.find((method) => method.name === 'mfa');
 
   if (completedMfa) {
     return;
@@ -40,8 +37,8 @@ exports.onExecutePostLogin = async (event, api) => {
 
   // enable mfa
 
-  api.multifactor.enable("any", {
-    allowRememberBrowser: false,
+  api.multifactor.enable('any', {
+    allowRememberBrowser: false
   });
 };
 

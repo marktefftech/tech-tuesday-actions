@@ -5,20 +5,20 @@
  * @param {PostLoginAPI} api - Interface whose methods can be used to change the behavior of the login.
  */
 exports.onExecutePostLogin = async (event, api) => {
-  const NS = "https://letsdoauth.com";
-  const ManagementClient = require("auth0").ManagementClient;
+  const NS = 'https://letsdoauth.com';
+  const ManagementClient = require('auth0').ManagementClient;
 
   const createManagementClient = () =>
     new ManagementClient({
       domain: event.secrets.DOMAIN,
       clientId: event.secrets.CLIENT_ID,
       clientSecret: event.secrets.CLIENT_SECRET,
-      scope: "read:roles update:users create:role_members",
+      scope: 'read:roles update:users create:role_members'
     });
 
   const roleAdmin = {
-    id: "rol_Q77GDsXEfL3qpYmu",
-    name: "Administrator",
+    id: 'rol_Q77GDsXEfL3qpYmu',
+    name: 'Administrator'
   };
 
   if (

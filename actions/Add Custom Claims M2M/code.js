@@ -5,7 +5,7 @@
  * @param {CredentialsExchangeAPI} api - Interface whose methods can be used to change the behavior of client credentials grant.
  */
 exports.onExecuteCredentialsExchange = async (event, api) => {
-  const NS = "https://letsdoauth.com";
+  const NS = 'https://letsdoauth.com';
 
-  api.accessToken.setCustomClaim(`${NS}/custom_claim`, "M2M claim");
+  api.accessToken.setCustomClaim(`${NS}/custom_claim`, 'M2M claim');
 };

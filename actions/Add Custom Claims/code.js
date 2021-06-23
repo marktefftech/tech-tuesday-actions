@@ -5,7 +5,7 @@
  * @param {PostLoginAPI} api - Interface whose methods can be used to change the behavior of the login.
  */
 exports.onExecutePostLogin = async (event, api) => {
-  const NS = "https://letsdoauth.com";
+  const NS = 'https://letsdoauth.com';
 
   const { enable_mfa = false } = event.user.app_metadata;
 
