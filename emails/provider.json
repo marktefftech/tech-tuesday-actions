@@ -3,7 +3,7 @@
   "credentials": {
     "smtp_host": "smtp.mailtrap.io",
     "smtp_port": 2525,
-    "smtp_user": "23b158ac69b5f7",
+    "smtp_user": "9fa7208a110416",
     "smtp_pass": "##SMTP_PASSWORD##"
   },
   "enabled": true,
