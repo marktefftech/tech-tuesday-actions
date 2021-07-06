@@ -14,16 +14,13 @@
   ],
   "secrets": [
     {
-      "name": "CLIENT_SECRET",
-      "value": "_VALUE_NOT_SHOWN_"
+      "name": "CLIENT_SECRET"
     },
     {
-      "name": "CLIENT_ID",
-      "value": "_VALUE_NOT_SHOWN_"
+      "name": "CLIENT_ID"
     },
     {
-      "name": "DOMAIN",
-      "value": "_VALUE_NOT_SHOWN_"
+      "name": "DOMAIN"
     }
   ],
   "supported_triggers": [

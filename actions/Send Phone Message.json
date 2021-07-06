@@ -10,16 +10,13 @@
   ],
   "secrets": [
     {
-      "name": "AWS_REGION",
-      "value": "_VALUE_NOT_SHOWN_"
+      "name": "AWS_REGION"
     },
     {
-      "name": "AWS_ACCESS_KEY_ID",
-      "value": "_VALUE_NOT_SHOWN_"
+      "name": "AWS_ACCESS_KEY_ID"
     },
     {
-      "name": "AWS_SECRET_ACCESS_KEY",
-      "value": "_VALUE_NOT_SHOWN_"
+      "name": "AWS_SECRET_ACCESS_KEY"
     }
   ],
   "supported_triggers": [

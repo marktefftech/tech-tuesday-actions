@@ -10,16 +10,13 @@
   ],
   "secrets": [
     {
-      "name": "DOMAIN",
-      "value": "_VALUE_NOT_SHOWN_"
+      "name": "DOMAIN"
     },
     {
-      "name": "CLIENT_ID",
-      "value": "_VALUE_NOT_SHOWN_"
+      "name": "CLIENT_ID"
     },
     {
-      "name": "CLIENT_SECRET",
-      "value": "_VALUE_NOT_SHOWN_"
+      "name": "CLIENT_SECRET"
     }
   ],
   "supported_triggers": [
@@ -28,5 +25,5 @@
       "version": "v2"
     }
   ],
-  "deployed": true
+  "deployed": false
 }
