@@ -1,0 +1,26 @@
+{
+  "post-login": [
+    {
+      "action_name": "Add Custom Claims",
+      "display_name": "Add Custom Claims"
+    },
+    {
+      "action_name": "Add Roles to User",
+      "display_name": "Add Roles to User"
+    },
+    {
+      "action_name": "Enable MFA",
+      "display_name": "Enable MFA"
+    },
+    {
+      "action_name": "Enable MFA Step Up",
+      "display_name": "Enable MFA Step Up"
+    }
+  ],
+  "credentials-exchange": [
+    {
+      "action_name": "Add Custom Claims M2M",
+      "display_name": "Add Custom Claims M2M"
+    }
+  ]
+}
