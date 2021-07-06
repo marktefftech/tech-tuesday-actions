@@ -1,0 +1,17 @@
+{
+  "name": "coke",
+  "display_name": "Coke",
+  "branding": {
+    "logo_url": "https://dahbura.s3-us-west-2.amazonaws.com/images/logo-coca-cola.png"
+  },
+  "connections": [
+    {
+      "connection_id": "con_M5KHjOWT2XbrVQrT",
+      "assign_membership_on_login": true,
+      "connection": {
+        "name": "username-password-authentication",
+        "strategy": "auth0"
+      }
+    }
+  ]
+}
