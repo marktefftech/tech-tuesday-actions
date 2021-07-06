@@ -1,0 +1,7 @@
+{
+  "name": "sms",
+  "provider": "twilio",
+  "sid": null,
+  "from": null,
+  "messaging_service_sid": null
+}
