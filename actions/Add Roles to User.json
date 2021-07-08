@@ -4,23 +4,8 @@
   "status": "built",
   "dependencies": [
     {
-      "name": "@aws-sdk/client-elasticache",
-      "version": "3.17.0"
-    },
-    {
       "name": "auth0",
       "version": "2.35.0"
-    }
-  ],
-  "secrets": [
-    {
-      "name": "CLIENT_SECRET"
-    },
-    {
-      "name": "CLIENT_ID"
-    },
-    {
-      "name": "DOMAIN"
     }
   ],
   "supported_triggers": [
