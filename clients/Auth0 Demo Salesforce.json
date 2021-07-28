@@ -17,7 +17,10 @@
       }
     }
   },
-  "callbacks": ["https://rudydahbura-dev-ed.my.salesforce.com"],
+  "callbacks": [
+    "https://rudydahbura-dev-ed.my.salesforce.com",
+    "https://rudydahbura-dev-ed.my.salesforce.com/services/authcallback/auth0"
+  ],
   "description": "Auth0 SAML Salesforce integration application.",
   "logo_uri": "",
   "sso": false,
