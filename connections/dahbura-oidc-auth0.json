@@ -11,7 +11,12 @@
     "domain_aliases": ["letsdoauth.com"],
     "token_endpoint": "https://rudydahbura-idp.auth0.com/oauth/token",
     "userinfo_endpoint": "https://rudydahbura-idp.auth0.com/userinfo",
-    "authorization_endpoint": "https://rudydahbura-idp.auth0.com/authorize"
+    "authorization_endpoint": "https://rudydahbura-idp.auth0.com/authorize",
+    "upstream_params": {
+      "audience": {
+        "value": "https://api.rudydahbura-idp.com"
+      }
+    }
   },
   "strategy": "oidc",
   "name": "dahbura-oidc-auth0",
