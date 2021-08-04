@@ -13,10 +13,12 @@ exports.onExecutePostLogin = async (event, api) => {
   api.idToken.setCustomClaim(`${NS}/conn_strategy`, event.connection.strategy);
   api.idToken.setCustomClaim(`${NS}/enable_mfa`, enable_mfa);
 
-  if (event.authorization) {
-    api.idToken.setCustomClaim(`${NS}/roles`, event.authorization.roles);
-    api.accessToken.setCustomClaim(`${NS}/roles`, event.authorization.roles);
+  if (!event.authorization) {
+    return;
   }
+
+  api.idToken.setCustomClaim(`${NS}/roles`, event.authorization.roles);
+  api.accessToken.setCustomClaim(`${NS}/roles`, event.authorization.roles);
 };
 
 /**

@@ -21,20 +21,23 @@ exports.onExecutePostLogin = async (event, api) => {
     name: 'Administrator'
   };
 
-  if (
-    event.authorization &&
-    !event.authorization.roles.includes(roleAdmin.name)
-  ) {
-    try {
-      const management = createManagementClient();
-      const result = await management.assignRolestoUser(
-        { id: event.user.user_id },
-        { roles: [roleAdmin.id] }
-      );
-      api.idToken.setCustomClaim(`${NS}/role_assignment`, true);
-    } catch (err) {
-      console.log(err);
-    }
+  if (!event.authorization) {
+    return;
+  }
+
+  if (event.authorization.roles.includes(roleAdmin.name)) {
+    return;
+  }
+
+  try {
+    const management = createManagementClient();
+    await management.assignRolestoUser(
+      { id: event.user.user_id },
+      { roles: [roleAdmin.id] }
+    );
+    api.idToken.setCustomClaim(`${NS}/role_assignment`, true);
+  } catch (err) {
+    console.log(err);
   }
 };
 

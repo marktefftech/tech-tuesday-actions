@@ -5,11 +5,11 @@
  * @param {PostLoginAPI} api - Interface whose methods can be used to change the behavior of the login.
  */
 exports.onExecutePostLogin = async (event, api) => {
-  const CLIENTS = ['Auth0 Demo SPA', 'Auth0 Demo Web App'];
+  const clients = ['Auth0 Demo SPA', 'Auth0 Demo Web App'];
 
   // check if client is whitelisted
 
-  if (!CLIENTS.includes(event.client.name)) {
+  if (!clients.includes(event.client.name)) {
     return;
   }
 
