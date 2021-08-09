@@ -25,6 +25,10 @@ exports.onExecutePostLogin = async (event, api) => {
     return;
   }
 
+  if (!event.authorization.roles) {
+    return;
+  }
+
   if (event.authorization.roles.includes(roleAdmin.name)) {
     return;
   }

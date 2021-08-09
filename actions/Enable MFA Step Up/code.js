@@ -20,6 +20,10 @@ exports.onExecutePostLogin = async (event, api) => {
     return;
   }
 
+  if (!event.transaction.acr_values) {
+    return;
+  }
+
   if (!event.transaction.acr_values.includes(papeMfa)) {
     return;
   }
