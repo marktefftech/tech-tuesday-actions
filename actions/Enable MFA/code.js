@@ -23,15 +23,7 @@ exports.onExecutePostLogin = async (event, api) => {
 
   // check if MFA has been completed
 
-  if (!event.authentication) {
-    return;
-  }
-
-  const { methods = [] } = event.authentication;
-
-  const completedMfa = !!methods.find((method) => method.name === 'mfa');
-
-  if (completedMfa) {
+  if (!!event.authentication?.methods?.find((m) => m.name === 'mfa')) {
     return;
   }
 

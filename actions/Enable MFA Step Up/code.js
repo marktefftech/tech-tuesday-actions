@@ -16,15 +16,7 @@ exports.onExecutePostLogin = async (event, api) => {
   const papeMfa =
     'http://schemas.openid.net/pape/policies/2007/06/multi-factor';
 
-  if (!event.transaction) {
-    return;
-  }
-
-  if (!event.transaction.acr_values) {
-    return;
-  }
-
-  if (!event.transaction.acr_values.includes(papeMfa)) {
+  if (!event.transaction?.acr_values?.includes(papeMfa)) {
     return;
   }
 
