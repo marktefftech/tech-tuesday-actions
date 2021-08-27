@@ -1,7 +1,8 @@
 {
   "name": "Link Accounts",
-  "code": "rudydahbura.auth0.com/actions/Link Accounts/code.js",
-  "status": "built",
+  "code": "tenant/actions/Link Accounts/code.js",
+  "runtime": "node16",
+  "status": "pending",
   "dependencies": [
     {
       "name": "auth0",

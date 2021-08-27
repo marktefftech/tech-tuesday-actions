@@ -22,5 +22,11 @@
       "action_name": "Add Custom Claims M2M",
       "display_name": "Add Custom Claims M2M"
     }
+  ],
+  "send-phone-message": [
+    {
+      "action_name": "Send Phone Message",
+      "display_name": "Send Phone Message"
+    }
   ]
 }

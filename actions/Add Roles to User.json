@@ -1,11 +1,23 @@
 {
   "name": "Add Roles to User",
-  "code": "rudydahbura.auth0.com/actions/Add Roles to User/code.js",
+  "code": "tenant/actions/Add Roles to User/code.js",
+  "runtime": "node16",
   "status": "built",
   "dependencies": [
     {
       "name": "auth0",
       "version": "2.35.0"
+    }
+  ],
+  "secrets": [
+    {
+      "name": "CLIENT_SECRET"
+    },
+    {
+      "name": "CLIENT_ID"
+    },
+    {
+      "name": "DOMAIN"
     }
   ],
   "supported_triggers": [
