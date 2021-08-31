@@ -1,0 +1,26 @@
+{
+  "options": {
+    "type": "front_channel",
+    "scope": "openid profile email groups",
+    "issuer": "https://dev-486296.oktapreview.com",
+    "jwks_uri": "https://dev-486296.oktapreview.com/oauth2/v1/keys",
+    "client_id": "0oa10sh8nbc7NbPyx0h8",
+    "client_secret": "##CONN_SECRET_DAHBURA_OIDC_OKTA##",
+    "discovery_url": "https://dev-486296.oktapreview.com/.well-known/openid-configuration",
+    "domain_aliases": ["letsdoauth.com"],
+    "token_endpoint": "https://dev-486296.oktapreview.com/oauth2/v1/token",
+    "userinfo_endpoint": "https://dev-486296.oktapreview.com/oauth2/v1/userinfo",
+    "authorization_endpoint": "https://dev-486296.oktapreview.com/oauth2/v1/authorize",
+    "upstream_params": {
+      "audience": {
+        "value": "https://api.rudydahbura-idp.com"
+      }
+    }
+  },
+  "strategy": "oidc",
+  "name": "dahbura-oidc-okta",
+  "is_domain_connection": false,
+  "display_name": "Okta OIDC",
+  "show_as_button": false,
+  "enabled_clients": ["Auth0 Demo SPA", "Auth0 Demo Web App"]
+}
