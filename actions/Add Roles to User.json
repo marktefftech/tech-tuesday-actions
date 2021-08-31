@@ -1,6 +1,6 @@
 {
   "name": "Add Roles to User",
-  "code": "tenant/actions/Add Roles to User/code.js",
+  "code": "rudydahbura.auth0.com/actions/Add Roles to User/code.js",
   "runtime": "node16",
   "status": "built",
   "dependencies": [

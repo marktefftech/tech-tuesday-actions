@@ -1,6 +1,6 @@
 {
   "name": "Enable MFA",
-  "code": "tenant/actions/Enable MFA/code.js",
+  "code": "rudydahbura.auth0.com/actions/Enable MFA/code.js",
   "runtime": "node16",
   "status": "built",
   "dependencies": [],

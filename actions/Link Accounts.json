@@ -1,6 +1,6 @@
 {
   "name": "Link Accounts",
-  "code": "tenant/actions/Link Accounts/code.js",
+  "code": "rudydahbura.auth0.com/actions/Link Accounts/code.js",
   "runtime": "node16",
   "status": "pending",
   "dependencies": [

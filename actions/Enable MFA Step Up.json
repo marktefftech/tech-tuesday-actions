@@ -1,6 +1,6 @@
 {
   "name": "Enable MFA Step Up",
-  "code": "tenant/actions/Enable MFA Step Up/code.js",
+  "code": "rudydahbura.auth0.com/actions/Enable MFA Step Up/code.js",
   "runtime": "node16",
   "status": "built",
   "dependencies": [],
