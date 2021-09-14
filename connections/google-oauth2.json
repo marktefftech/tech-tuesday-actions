@@ -38,9 +38,5 @@
   "strategy": "google-oauth2",
   "name": "google-oauth2",
   "is_domain_connection": false,
-  "enabled_clients": [
-    "Auth0 Demo Device Flow",
-    "Auth0 Demo SPA",
-    "Auth0 Demo Web App"
-  ]
+  "enabled_clients": []
 }
