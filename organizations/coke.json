@@ -6,7 +6,7 @@
   },
   "connections": [
     {
-      "name": "username-password-authentication",
+      "name": "username-password",
       "assign_membership_on_login": true
     },
     {

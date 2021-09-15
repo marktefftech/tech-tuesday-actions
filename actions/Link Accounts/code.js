@@ -66,9 +66,8 @@ exports.onExecutePostLogin = async (event, api) => {
     .filter(
       (u) =>
         u.user_id !== event.user.user_id &&
-        u.identities.filter(
-          (i) => i.connection === 'username-password-authentication'
-        ).length > 0
+        u.identities.filter((i) => i.connection === 'username-password')
+          .length > 0
     )
     .map((u) => ({
       email: u.email,

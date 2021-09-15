@@ -27,9 +27,9 @@
     "enabledDatabaseCustomization": false
   },
   "strategy": "auth0",
-  "name": "username-password-authentication",
+  "name": "username-password",
   "is_domain_connection": false,
-  "realms": ["username-password-authentication"],
+  "realms": ["username-password"],
   "enabled_clients": [
     "Auth0 Demo Device Flow",
     "Auth0 Demo SPA",
