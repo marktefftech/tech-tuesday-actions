@@ -12,6 +12,7 @@ exports.onExecutePostLogin = async (event, api) => {
   api.idToken.setCustomClaim(`${NS}/conn_name`, event.connection.name);
   api.idToken.setCustomClaim(`${NS}/conn_strategy`, event.connection.strategy);
   api.idToken.setCustomClaim(`${NS}/enable_mfa`, enable_mfa);
+  api.idToken.setCustomClaim(`${NS}/org_name`, event?.organization?.name);
 
   if (!event.authorization) {
     return;
