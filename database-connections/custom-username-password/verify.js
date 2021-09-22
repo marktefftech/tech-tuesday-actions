@@ -44,9 +44,9 @@ async function verify(email, callback) {
       },
       body: JSON.stringify({
         grant_type: 'client_credentials',
+        audience: configuration.JWT_AUDIENCE,
         client_id: configuration.JWT_CLIENT_ID,
-        client_secret: configuration.JWT_CLIENT_SECRET,
-        audience: configuration.JWT_AUDIENCE
+        client_secret: configuration.JWT_CLIENT_SECRET
       })
     });
 
