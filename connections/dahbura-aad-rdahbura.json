@@ -16,6 +16,7 @@
       "33aa57ed11e8ada2eca6b7c97910a34b1b944617",
       "d7ca67320dd49ab5af04afed90301b8e03390a60"
     ],
+    "identity_api": "microsoft-identity-platform-v2.0",
     "basic_profile": true,
     "tenant_domain": "rdahburagmail.onmicrosoft.com",
     "waad_protocol": "openid-connect",
