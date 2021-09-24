@@ -11,19 +11,19 @@
     "format": "prettier --write './{clients,connections,database-connections,emails,grants,guardian,hooks,pages,resource-servers,roles,rules}/**/*.{css,html,js,json,jsx}'"
   },
   "dependencies": {
-    "aws-sdk": "^2.965.0",
+    "aws-sdk": "^2.995.0",
     "lodash": "^4.17.21",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "^2.3.2"
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
   },
   "babel": {
     "presets": [
