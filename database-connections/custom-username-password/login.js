@@ -9,43 +9,6 @@
 async function login(email, password, callback) {
   const fetch = require('node-fetch@2.6.0');
 
-  try {
-    const token = await getToken();
-
-    const url = `https://${configuration.DOMAIN_API}/api/databases/users/${email}/login`;
-
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        password: password
-      })
-    });
-
-    if (!res.ok) {
-      const error = await res.json();
-      callback(new Error(error.message));
-      return;
-    }
-
-    const text = await res.text();
-
-    if (text.length === 0) {
-      callback(null);
-      return;
-    }
-
-    const user = JSON.parse(text);
-    user.user_id = user._id.toString();
-
-    callback(null, user);
-  } catch (err) {
-    callback(err);
-  }
-
   const getToken = async () => {
     const url = `https://${configuration.DOMAIN_AUTH0}/oauth/token`;
 
@@ -70,4 +33,42 @@ async function login(email, password, callback) {
 
     return body.access_token;
   };
+
+  try {
+    const token = await getToken();
+
+    const url = `https://${configuration.DOMAIN_API}/db/logins`;
+
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password
+      })
+    });
+
+    if (!res.ok) {
+      const error = await res.json();
+      callback(new Error(error.msg));
+      return;
+    }
+
+    const text = await res.text();
+
+    if (text.length === 0) {
+      callback(null);
+      return;
+    }
+
+    const user = JSON.parse(text);
+    user.user_id = user._id.toString();
+
+    callback(null, user);
+  } catch (err) {
+    callback(err);
+  }
 }

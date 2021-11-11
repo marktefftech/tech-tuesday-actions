@@ -9,31 +9,6 @@
 async function create(user, callback) {
   const fetch = require('node-fetch@2.6.0');
 
-  try {
-    const token = await getToken();
-
-    const url = `https://${configuration.DOMAIN_API}/api/databases/users`;
-
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(user)
-    });
-
-    if (!res.ok) {
-      const error = await res.json();
-      callback(new Error(error.message));
-      return;
-    }
-
-    callback(null);
-  } catch (err) {
-    callback(err);
-  }
-
   const getToken = async () => {
     const url = `https://${configuration.DOMAIN_AUTH0}/oauth/token`;
 
@@ -58,4 +33,29 @@ async function create(user, callback) {
 
     return body.access_token;
   };
+
+  try {
+    const token = await getToken();
+
+    const url = `https://${configuration.DOMAIN_API}/db/users`;
+
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    });
+
+    if (!res.ok) {
+      const error = await res.json();
+      callback(new Error(error.msg));
+      return;
+    }
+
+    callback(null);
+  } catch (err) {
+    callback(err);
+  }
 }

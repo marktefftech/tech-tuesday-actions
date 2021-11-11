@@ -7,30 +7,6 @@
 async function remove(user_id, callback) {
   const fetch = require('node-fetch@2.6.0');
 
-  try {
-    const token = await getToken();
-
-    const url = `https://${configuration.DOMAIN_API}/api/databases/users/${user_id}`;
-
-    const res = await fetch(url, {
-      method: 'DELETE',
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
-      }
-    });
-
-    if (!res.ok) {
-      const error = await res.json();
-      callback(new Error(error.message));
-      return;
-    }
-
-    callback(null);
-  } catch (err) {
-    callback(err);
-  }
-
   const getToken = async () => {
     const url = `https://${configuration.DOMAIN_AUTH0}/oauth/token`;
 
@@ -55,4 +31,28 @@ async function remove(user_id, callback) {
 
     return body.access_token;
   };
+
+  try {
+    const token = await getToken();
+
+    const url = `https://${configuration.DOMAIN_API}/db/users/${user_id}`;
+
+    const res = await fetch(url, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!res.ok) {
+      const error = await res.json();
+      callback(new Error(error.msg));
+      return;
+    }
+
+    callback(null);
+  } catch (err) {
+    callback(err);
+  }
 }
