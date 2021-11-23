@@ -62,9 +62,14 @@ async function getUser(email, callback) {
     }
 
     const user = res.data[0];
-    user.user_id = user._id.toString();
 
-    callback(null, user);
+    callback(null, {
+      user_id: user._id.toString(),
+      email: user.email,
+      email_verified: user.email_verified,
+      family_name: user.family_name,
+      given_name: user.given_name
+    });
   } catch (err) {
     callback(err);
   }

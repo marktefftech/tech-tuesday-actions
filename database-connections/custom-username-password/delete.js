@@ -5,29 +5,33 @@
 //    callback(new Error("my error message"));
 
 async function remove(user_id, callback) {
-  const fetch = require('node-fetch@2.6.0');
+  const axios = require('axios@0.22.0');
+  const qs = require('qs');
 
   const getToken = async () => {
     const url = `https://${configuration.DOMAIN_AUTH0}/oauth/token`;
 
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
+    const res = await axios.post(
+      url,
+      qs.stringify({
         grant_type: 'client_credentials',
         audience: configuration.JWT_AUDIENCE,
         client_id: configuration.JWT_CLIENT_ID,
         client_secret: configuration.JWT_CLIENT_SECRET
-      })
-    });
+      }),
+      {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }
+    );
 
-    const body = await res.json();
-
-    if (!res.ok) {
-      throw new Error(body.message);
+    if (res.status < 200 || res.status >= 300) {
+      const error = res.data;
+      throw new Error(error.msg);
     }
+
+    const body = res.data;
 
     return body.access_token;
   };
@@ -35,18 +39,17 @@ async function remove(user_id, callback) {
   try {
     const token = await getToken();
 
-    const url = `https://${configuration.DOMAIN_API}/db/users/${user_id}`;
+    let url = `http://${configuration.DOMAIN_API}/db/users/${user_id}`;
 
-    const res = await fetch(url, {
-      method: 'DELETE',
+    let res = await axios.delete(url, {
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json'
       }
     });
 
-    if (!res.ok) {
-      const error = await res.json();
+    if (res.status < 200 || res.status >= 300) {
+      const error = res.data;
       callback(new Error(error.msg));
       return;
     }
