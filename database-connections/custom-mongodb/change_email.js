@@ -17,9 +17,9 @@ async function changeEmail(email, newEmail, verified, callback) {
       url,
       qs.stringify({
         grant_type: 'client_credentials',
-        audience: configuration.JWT_AUDIENCE,
         client_id: configuration.JWT_CLIENT_ID,
-        client_secret: configuration.JWT_CLIENT_SECRET
+        client_secret: configuration.JWT_CLIENT_SECRET,
+        audience: configuration.JWT_AUDIENCE
       }),
       {
         headers: {
@@ -33,9 +33,7 @@ async function changeEmail(email, newEmail, verified, callback) {
       throw new Error(error.msg);
     }
 
-    const body = res.data;
-
-    return body.access_token;
+    return res.data.access_token;
   };
 
   try {
