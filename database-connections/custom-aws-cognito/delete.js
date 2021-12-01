@@ -3,6 +3,8 @@
 //    callback(null);
 // 2. Something went wrong while trying to reach your database:
 //    callback(new Error("my error message"));
+//
+//
 
 async function remove(user_id, callback) {
   const AWS = require('aws-sdk@2.593.0');

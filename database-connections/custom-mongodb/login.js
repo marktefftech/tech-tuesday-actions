@@ -39,10 +39,8 @@ async function login(email, password, callback) {
   try {
     const token = await getToken();
 
-    const url = `https://${configuration.DOMAIN_API}/db/logins`;
-
     const res = await axios.post(
-      url,
+      `https://${configuration.DOMAIN_API}/db/logins`,
       {
         email: email,
         password: password

@@ -3,6 +3,8 @@
 //    callback(null, true);
 // 2. Something went wrong while trying to reach your database:
 //    callback(new Error("my error message"));
+//
+//
 
 async function verify(email, callback) {
   const AWS = require('aws-sdk@2.593.0');

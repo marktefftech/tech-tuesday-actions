@@ -39,14 +39,15 @@ async function getUser(email, callback) {
   try {
     const token = await getToken();
 
-    const url = `https://${configuration.DOMAIN_API}/db/users?email=${email}`;
-
-    const res = await axios.get(url, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
+    const res = await axios.get(
+      `https://${configuration.DOMAIN_API}/db/users?email=${email}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
       }
-    });
+    );
 
     if (res.status < 200 || res.status >= 300) {
       const error = res.data;

@@ -39,14 +39,16 @@ async function create(user, callback) {
   try {
     const token = await getToken();
 
-    let url = `http://${configuration.DOMAIN_API}/db/users`;
-
-    let res = await axios.post(url, user, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
+    let res = await axios.post(
+      `http://${configuration.DOMAIN_API}/db/users`,
+      user,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
       }
-    });
+    );
 
     if (res.status < 200 || res.status >= 300) {
       const error = res.data;

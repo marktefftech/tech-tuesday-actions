@@ -3,6 +3,8 @@
 //    callback(null);
 // 2. Something went wrong while trying to reach your database:
 //    callback(new Error("my error message"));
+//
+//
 
 async function remove(user_id, callback) {
   const axios = require('axios@0.22.0');
@@ -37,14 +39,15 @@ async function remove(user_id, callback) {
   try {
     const token = await getToken();
 
-    let url = `http://${configuration.DOMAIN_API}/db/users/${user_id}`;
-
-    let res = await axios.delete(url, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json'
+    let res = await axios.delete(
+      `http://${configuration.DOMAIN_API}/db/users/${user_id}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
       }
-    });
+    );
 
     if (res.status < 200 || res.status >= 300) {
       const error = res.data;
