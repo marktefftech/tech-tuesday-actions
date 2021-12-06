@@ -30,7 +30,7 @@ async function remove(user_id, callback) {
 
     if (res.status < 200 || res.status >= 300) {
       const error = res.data;
-      throw new Error(error.msg);
+      throw new Error(error.error_description);
     }
 
     return res.data.access_token;
