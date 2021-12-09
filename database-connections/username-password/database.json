@@ -5,7 +5,7 @@
       "return_enroll_settings": true
     },
     "import_mode": false,
-    "disable_signup": false,
+    "disable_signup": true,
     "passwordPolicy": "good",
     "password_history": {
       "size": 5,

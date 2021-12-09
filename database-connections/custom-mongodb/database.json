@@ -4,7 +4,6 @@
       "active": true,
       "return_enroll_settings": true
     },
-    "import_mode": false,
     "customScripts": {
       "change_email": "./change_email.js",
       "change_password": "./change_password.js",
@@ -14,7 +13,8 @@
       "login": "./login.js",
       "verify": "./verify.js"
     },
-    "disable_signup": false,
+    "import_mode": false,
+    "disable_signup": true,
     "passwordPolicy": "good",
     "password_history": {
       "size": 5,
