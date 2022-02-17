@@ -3,13 +3,13 @@
   "callbacks": [
     "http://localhost:3000/callback",
     "http://localhost:3000/callback-idp",
-    "https://letsdoauth-react.herokuapp.com/callback",
-    "https://letsdoauth-react.herokuapp.com/callback-idp"
+    "https://letsdoauthreact.herokuapp.com/callback",
+    "https://letsdoauthreact.herokuapp.com/callback-idp"
   ],
   "allowed_clients": [],
   "allowed_logout_urls": [
     "http://localhost:3000",
-    "https://letsdoauth-react.herokuapp.com"
+    "https://letsdoauthreact.herokuapp.com"
   ],
   "is_first_party": true,
   "oidc_conformant": true,
@@ -20,7 +20,7 @@
   "cross_origin_auth": false,
   "addons": {},
   "client_metadata": {},
-  "initiate_login_uri": "https://letsdoauth-react.herokuapp.com/login",
+  "initiate_login_uri": "https://letsdoauthreact.herokuapp.com/login",
   "native_social_login": {
     "apple": {
       "enabled": false
@@ -54,7 +54,7 @@
   "grant_types": ["authorization_code", "refresh_token"],
   "web_origins": [
     "http://localhost:3000",
-    "https://letsdoauth-react.herokuapp.com"
+    "https://letsdoauthreact.herokuapp.com"
   ],
   "custom_login_page_on": true
 }
