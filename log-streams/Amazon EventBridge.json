@@ -1,0 +1,10 @@
+{
+  "name": "Amazon EventBridge",
+  "type": "eventbridge",
+  "status": "active",
+  "sink": {
+    "awsAccountId": "997717629617",
+    "awsRegion": "us-west-2",
+    "awsPartnerEventSource": "aws.partner/auth0.com/rudydahbura-77d6a639-47ad-461d-a4f6-37cb0c56a2e6/auth0.logs"
+  }
+}
